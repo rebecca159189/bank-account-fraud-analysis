@@ -1,0 +1,6 @@
+﻿rule_id,node_id,path,teacher_log_odds,train_rows,validation_rows,test_rows,test_fraud,test_fraud_rate,frozen_threshold_alert
+R1,8,housing_status 等于 BA 且 device_os 等于 windows,1.0011696801811172,45597,6241,6090,546,0.0896551724137931,False
+R2,7,housing_status 等于 BA 且 device_os 不等于 windows,-0.38788364124818353,84178,14477,13092,353,0.026963030858539565,False
+R3,4,housing_status 不等于 BA 且 device_os 等于 windows,-1.1139964348019717,167328,19198,19052,278,0.014591643921897964,False
+R4,6,housing_status 不等于 BA 且 device_os 不等于 windows 且 prev_address_months_count 缺失,-2.20222554779502,338138,49087,35596,209,0.0058714462299134735,False
+R5,5,housing_status 不等于 BA 且 device_os 不等于 windows 且 prev_address_months_count 非缺失,-3.452818996325149,159748,19165,23013,42,0.0018250554034676054,False

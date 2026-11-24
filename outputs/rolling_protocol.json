@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "created_at_singapore": "2026-10-18T20:40:57+08:00",
+  "seed": 42,
+  "design": "Post-hoc retrospective rolling-origin robustness check; not fresh holdouts",
+  "windows": [
+    {
+      "train_months": [
+        0,
+        1,
+        2
+      ],
+      "validation_month": 3,
+      "test_month": 4
+    },
+    {
+      "train_months": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "validation_month": 4,
+      "test_month": 5
+    },
+    {
+      "train_months": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "validation_month": 5,
+      "test_month": 6
+    },
+    {
+      "train_months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "validation_month": 6,
+      "test_month": 7
+    }
+  ],
+  "baseline_candidates": [
+    {
+      "num_leaves": 15,
+      "reg_lambda": 5.0
+    },
+    {
+      "num_leaves": 31,
+      "reg_lambda": 10.0
+    },
+    {
+      "num_leaves": 63,
+      "reg_lambda": 20.0
+    }
+  ],
+  "baseline_selection": "Highest validation recall at FPR<=5%; validation AP breaks ties, candidate order breaks exact ties",
+  "ablation_selection": "Use each window baseline configuration; independently early-stop on that validation month; never select variants on test",
+  "variants": {
+    "baseline": [],
+    "no_age": [
+      "customer_age"
+    ],
+    "no_velocity_short": [
+      "velocity_6h",
+      "velocity_24h"
+    ],
+    "no_velocity_all": [
+      "velocity_6h",
+      "velocity_24h",
+      "velocity_4w"
+    ]
+  },
+  "review_rate": 0.05,
+  "validation_max_fpr": 0.05,
+  "equal_budget": "floor(0.05*N) per test month for ALL variants; differs from main experiment 0.056412 budget",
+  "bootstrap_reps": 500,
+  "uncertainty": "Paired age-by-label-stratified bootstrap of fixed predictions; observed strata sizes, fitted models, thresholds and top-K flags held fixed; excludes retraining, threshold estimation, and future-month uncertainty",
+  "caveats": [
+    "All months have already been inspected: this is exploratory robustness evidence.",
+    "Training sets overlap, so the four windows are not four independent replicates.",
+    "Min/max across months is an observed range, not a confidence interval.",
+    "Labels are treated as available by the next month; the dataset has no reporting-delay information."
+  ],
+  "source_sha256": "4d682a2c72b92bdda61b731e910d4a956118e748985eba464e00e287c4130276",
+  "raw_sha256": "7bf10a37ce07e72e14c1b09e5efee3d27261baff4facc7da767b0474dcf9b809",
+  "environment": {
+    "python": "3.12.14"
+  }
+}

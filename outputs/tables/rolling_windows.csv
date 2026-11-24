@@ -1,0 +1,5 @@
+﻿window_id,train_months,validation_month,test_month,train_n,validation_n,test_n,test_fraud,selected_num_leaves,selected_reg_lambda,selected_best_iteration,k,validation_k
+window_5,"[0, 1, 2]",3,4,397039,150936,127691,1452,31,10.0,235,6384,7546
+window_6,"[0, 1, 2, 3]",4,5,547975,127691,119323,1411,31,10.0,352,5966,6384
+window_7,"[0, 1, 2, 3, 4]",5,6,675666,119323,108168,1450,15,5.0,545,5408,5966
+window_8,"[0, 1, 2, 3, 4, 5]",6,7,794989,108168,96843,1428,31,10.0,263,4842,5408

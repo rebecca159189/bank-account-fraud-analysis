@@ -1,0 +1,257 @@
+{
+  "shap_importance": [
+    {
+      "feature": "device_os",
+      "mean_abs_shap": 0.5195414444370566
+    },
+    {
+      "feature": "phone_home_valid",
+      "mean_abs_shap": 0.45439810298769334
+    },
+    {
+      "feature": "housing_status",
+      "mean_abs_shap": 0.4404391124615546
+    },
+    {
+      "feature": "name_email_similarity",
+      "mean_abs_shap": 0.3970894562892015
+    },
+    {
+      "feature": "prev_address_months_count",
+      "mean_abs_shap": 0.38169880401144196
+    },
+    {
+      "feature": "has_other_cards",
+      "mean_abs_shap": 0.35346167370238696
+    },
+    {
+      "feature": "current_address_months_count",
+      "mean_abs_shap": 0.3260527448472604
+    },
+    {
+      "feature": "keep_alive_session",
+      "mean_abs_shap": 0.3253457312872533
+    },
+    {
+      "feature": "email_is_free",
+      "mean_abs_shap": 0.3211364927370583
+    },
+    {
+      "feature": "income",
+      "mean_abs_shap": 0.2939893904173233
+    },
+    {
+      "feature": "employment_status",
+      "mean_abs_shap": 0.23061292335660127
+    },
+    {
+      "feature": "intended_balcon_amount",
+      "mean_abs_shap": 0.21868481478541038
+    },
+    {
+      "feature": "velocity_4w",
+      "mean_abs_shap": 0.21310710109941097
+    },
+    {
+      "feature": "bank_branch_count_8w",
+      "mean_abs_shap": 0.19982989084319644
+    },
+    {
+      "feature": "bank_months_count",
+      "mean_abs_shap": 0.17972684593937951
+    },
+    {
+      "feature": "credit_risk_score",
+      "mean_abs_shap": 0.16016590523646534
+    },
+    {
+      "feature": "velocity_24h",
+      "mean_abs_shap": 0.14506969062569425
+    },
+    {
+      "feature": "customer_age",
+      "mean_abs_shap": 0.13721526688393473
+    },
+    {
+      "feature": "zip_count_4w",
+      "mean_abs_shap": 0.13298297341828988
+    },
+    {
+      "feature": "days_since_request",
+      "mean_abs_shap": 0.12977186244211927
+    },
+    {
+      "feature": "date_of_birth_distinct_emails_4w",
+      "mean_abs_shap": 0.12129980910518492
+    },
+    {
+      "feature": "session_length_in_minutes",
+      "mean_abs_shap": 0.06180586914402411
+    },
+    {
+      "feature": "device_distinct_emails_8w",
+      "mean_abs_shap": 0.05258022476976169
+    },
+    {
+      "feature": "proposed_credit_limit",
+      "mean_abs_shap": 0.04953119212390089
+    },
+    {
+      "feature": "velocity_6h",
+      "mean_abs_shap": 0.03935953919181695
+    },
+    {
+      "feature": "phone_mobile_valid",
+      "mean_abs_shap": 0.021206232880936333
+    },
+    {
+      "feature": "foreign_request",
+      "mean_abs_shap": 0.01857855146931693
+    },
+    {
+      "feature": "payment_type",
+      "mean_abs_shap": 0.01215686049157017
+    },
+    {
+      "feature": "intended_balcon_amount__missing",
+      "mean_abs_shap": 0.0062462829662295995
+    },
+    {
+      "feature": "prev_address_months_count__missing",
+      "mean_abs_shap": 0.002303967012828064
+    },
+    {
+      "feature": "bank_months_count__missing",
+      "mean_abs_shap": 0.000654900508073818
+    },
+    {
+      "feature": "source",
+      "mean_abs_shap": 0.0004569374584214444
+    },
+    {
+      "feature": "current_address_months_count__missing",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "session_length_in_minutes__missing",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "device_distinct_emails_8w__missing",
+      "mean_abs_shap": 0.0
+    }
+  ],
+  "shap_sample_size": 5000,
+  "shap_additivity_max_error": 2.842170943040401e-14,
+  "shap_output": "raw fraud log-odds; native exact TreeSHAP",
+  "shap_split": "validation month6; never used to retune after test",
+  "rules": [
+    {
+      "rule_id": "R1",
+      "node_id": 8,
+      "path": "housing_status 等于 BA 且 device_os 等于 windows",
+      "teacher_log_odds": 1.0011696801811172,
+      "train_rows": 45597,
+      "validation_rows": 6241,
+      "test_rows": 6090,
+      "test_fraud": 546,
+      "test_fraud_rate": 0.0896551724137931,
+      "frozen_threshold_alert": false
+    },
+    {
+      "rule_id": "R2",
+      "node_id": 7,
+      "path": "housing_status 等于 BA 且 device_os 不等于 windows",
+      "teacher_log_odds": -0.38788364124818353,
+      "train_rows": 84178,
+      "validation_rows": 14477,
+      "test_rows": 13092,
+      "test_fraud": 353,
+      "test_fraud_rate": 0.026963030858539565,
+      "frozen_threshold_alert": false
+    },
+    {
+      "rule_id": "R3",
+      "node_id": 4,
+      "path": "housing_status 不等于 BA 且 device_os 等于 windows",
+      "teacher_log_odds": -1.1139964348019717,
+      "train_rows": 167328,
+      "validation_rows": 19198,
+      "test_rows": 19052,
+      "test_fraud": 278,
+      "test_fraud_rate": 0.014591643921897964,
+      "frozen_threshold_alert": false
+    },
+    {
+      "rule_id": "R4",
+      "node_id": 6,
+      "path": "housing_status 不等于 BA 且 device_os 不等于 windows 且 prev_address_months_count 缺失",
+      "teacher_log_odds": -2.20222554779502,
+      "train_rows": 338138,
+      "validation_rows": 49087,
+      "test_rows": 35596,
+      "test_fraud": 209,
+      "test_fraud_rate": 0.0058714462299134735,
+      "frozen_threshold_alert": false
+    },
+    {
+      "rule_id": "R5",
+      "node_id": 5,
+      "path": "housing_status 不等于 BA 且 device_os 不等于 windows 且 prev_address_months_count 非缺失",
+      "teacher_log_odds": -3.452818996325149,
+      "train_rows": 159748,
+      "validation_rows": 19165,
+      "test_rows": 23013,
+      "test_fraud": 42,
+      "test_fraud_rate": 0.0018250554034676054,
+      "frozen_threshold_alert": false
+    }
+  ],
+  "student_fidelity": {
+    "validation_spearman": 0.6011543770497564,
+    "validation_r2": 0.3799757935251633,
+    "validation_logit_mae": 1.2442621629395505,
+    "validation_frozen_decision_agreement": 0.9435877523851786,
+    "test_spearman": 0.6375855275265475,
+    "test_r2": 0.42787374363220076,
+    "test_logit_mae": 1.1801225524786454,
+    "test_frozen_decision_agreement": 0.9490309056927192
+  },
+  "numeric_imputation_medians": {
+    "income": 0.6000000238418579,
+    "name_email_similarity": 0.49974650144577026,
+    "prev_address_months_count": 32.0,
+    "current_address_months_count": 53.0,
+    "customer_age": 30.0,
+    "days_since_request": 0.015307345427572727,
+    "intended_balcon_amount": 32.60786819458008,
+    "zip_count_4w": 1361.0,
+    "velocity_6h": 5961.1904296875,
+    "velocity_24h": 5020.40966796875,
+    "velocity_4w": 5117.5615234375,
+    "bank_branch_count_8w": 10.0,
+    "date_of_birth_distinct_emails_4w": 9.0,
+    "credit_risk_score": 120.0,
+    "email_is_free": 1.0,
+    "phone_home_valid": 0.0,
+    "phone_mobile_valid": 1.0,
+    "bank_months_count": 15.0,
+    "has_other_cards": 0.0,
+    "proposed_credit_limit": 200.0,
+    "foreign_request": 0.0,
+    "session_length_in_minutes": 5.237647533416748,
+    "keep_alive_session": 1.0,
+    "device_distinct_emails_8w": 1.0,
+    "prev_address_months_count__missing": 1.0,
+    "current_address_months_count__missing": 0.0,
+    "bank_months_count__missing": 0.0,
+    "session_length_in_minutes__missing": 0.0,
+    "device_distinct_emails_8w__missing": 0.0,
+    "intended_balcon_amount__missing": 1.0
+  },
+  "rule_notes": [
+    "Five mutually exclusive risk tiers, ordered by student score; all applications belong to one tier.",
+    "Missing numeric values are replaced by training medians before these splits; displayed thresholds are rounded, exact execution is in the saved model.",
+    "Same-capacity comparison partially reviews tied boundary leaves using a seeded row hash; a whole-leaf OR rule has a coarser capacity."
+  ]
+}

@@ -1,0 +1,33 @@
+﻿column,raw_dtype,role,native_missing_count,minus_one_count,negative_count,effective_missing_count,effective_missing_fraction,raw_unique_count,constant,raw_min,raw_max,handling
+fraud_bool,int64,target,0,0,0,0,0.0,2,False,0.0,1.0,native null only
+income,float64,feature,0,0,0,0,0.0,9,False,0.1,0.9,native null only
+name_email_similarity,float64,feature,0,0,0,0,0.0,998861,False,1.4345504845275636e-06,0.9999993177937188,native null only
+prev_address_months_count,int64,feature,0,712920,712920,712920,0.71292,374,False,-1.0,383.0,-1 means missing (official datasheet Q7)
+current_address_months_count,int64,feature,0,4254,4254,4254,0.004254,423,False,-1.0,428.0,-1 means missing (official datasheet Q7)
+customer_age,int64,feature,0,0,0,0,0.0,9,False,10.0,90.0,native null only
+days_since_request,float64,feature,0,0,0,0,0.0,989330,False,4.036859788721786e-09,78.45690383509861,native null only
+intended_balcon_amount,float64,feature,0,0,742523,742523,0.742523,994971,False,-15.530554840076814,112.9569276953714,all negative values mean missing (official datasheet Q7)
+payment_type,object,feature,0,0,0,0,0.0,5,False,,,native null only
+zip_count_4w,int64,feature,0,0,0,0,0.0,6306,False,1.0,6700.0,native null only
+velocity_6h,float64,feature,0,0,44,0,0.0,998687,False,-170.60307235124628,16715.565404174275,negative values are valid; retain them (official datasheet Q7 ranges)
+velocity_24h,float64,feature,0,0,0,0,0.0,998940,False,1300.3073144849477,9506.896596111665,native null only
+velocity_4w,float64,feature,0,0,0,0,0.0,998318,False,2825.748405284728,6994.764200834217,native null only
+bank_branch_count_8w,int64,feature,0,0,0,0,0.0,2326,False,0.0,2385.0,native null only
+date_of_birth_distinct_emails_4w,int64,feature,0,0,0,0,0.0,40,False,0.0,39.0,native null only
+employment_status,object,feature,0,0,0,0,0.0,7,False,,,native null only
+credit_risk_score,int64,feature,0,488,14445,0,0.0,551,False,-170.0,389.0,negative values are valid; retain them (official datasheet Q7 ranges)
+email_is_free,int64,feature,0,0,0,0,0.0,2,False,0.0,1.0,native null only
+housing_status,object,feature,0,0,0,0,0.0,7,False,,,native null only
+phone_home_valid,int64,feature,0,0,0,0,0.0,2,False,0.0,1.0,native null only
+phone_mobile_valid,int64,feature,0,0,0,0,0.0,2,False,0.0,1.0,native null only
+bank_months_count,int64,feature,0,253635,253635,253635,0.253635,33,False,-1.0,32.0,-1 means missing (official datasheet Q7)
+has_other_cards,int64,feature,0,0,0,0,0.0,2,False,0.0,1.0,native null only
+proposed_credit_limit,float64,feature,0,0,0,0,0.0,12,False,190.0,2100.0,native null only
+foreign_request,int64,feature,0,0,0,0,0.0,2,False,0.0,1.0,native null only
+source,object,feature,0,0,0,0,0.0,2,False,,,native null only
+session_length_in_minutes,float64,feature,0,2015,2015,2015,0.002015,994887,False,-1.0,85.89914319274027,-1 means missing (official datasheet Q7)
+device_os,object,feature,0,0,0,0,0.0,5,False,,,native null only
+keep_alive_session,int64,feature,0,0,0,0,0.0,2,False,0.0,1.0,native null only
+device_distinct_emails_8w,int64,feature,0,359,359,359,0.000359,4,False,-1.0,2.0,-1 means missing (official datasheet Q7)
+device_fraud_count,int64,feature,0,0,0,0,0.0,1,True,0.0,0.0,native null only
+month,int64,split_only,0,0,0,0,0.0,8,False,0.0,7.0,native null only

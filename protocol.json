@@ -1,0 +1,167 @@
+{
+  "dataset": "BAF Base.csv, official Kaggle sgpjesus version 2, 1000000 rows",
+  "scope": "Data audit, supervised benchmarks, unsupervised baseline, SHAP, distilled rules, age fairness, temporal drift",
+  "seed": 42,
+  "train_months": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "validation_months": [
+    6
+  ],
+  "test_months": [
+    7
+  ],
+  "exclude_month_from_predictors": true,
+  "include_age_in_primary_models": true,
+  "missing": {
+    "minus_one": [
+      "prev_address_months_count",
+      "current_address_months_count",
+      "bank_months_count",
+      "session_length_in_minutes",
+      "device_distinct_emails_8w"
+    ],
+    "all_negative": [
+      "intended_balcon_amount"
+    ],
+    "preserve_valid_negatives": [
+      "velocity_6h",
+      "credit_risk_score"
+    ]
+  },
+  "preprocessing": "Train-only category levels, train-only constants, numeric median with missing indicators; standardization and one-hot for LR/MLP/IF/tree; LightGBM uses native categories and NaNs",
+  "candidates": {
+    "logistic_regression_C": [
+      0.1,
+      1.0
+    ],
+    "lightgbm_configs_num_leaves_reg_lambda": [
+      [
+        15,
+        5
+      ],
+      [
+        31,
+        10
+      ],
+      [
+        63,
+        20
+      ]
+    ],
+    "lightgbm_configs_note": "Three paired configurations as actually run in src/train.py (larger trees get stronger L2), not a 3x3 grid. Corrected 2026-10-18; the earlier text listed the two parameters separately, which read like a full grid.",
+    "lightgbm_learning_rate": 0.04,
+    "lightgbm_early_stopping": "validation average precision, patience60, at most900 trees",
+    "mlp_hidden": [
+      64,
+      32
+    ],
+    "mlp_learning_rates": [
+      0.001,
+      0.0004
+    ],
+    "mlp_epochs": "at most30, validation recall/AP patience6 after epoch10",
+    "isolation_forest": "one fixed config:250 trees,max_samples4096; no fit/parameter-selection labels",
+    "distillation": "Regress teacher training log-odds, depth3 or4, max5 leaves, min_leaf0.5%; choose validation same-budget recall then teacher Spearman"
+  },
+  "class_imbalance": "Balanced class/sample weights for LR, LightGBM and MLP; no synthetic resampling",
+  "threshold": "Lowest validation score threshold satisfying whole-tie FPR<=5%; freeze before test",
+  "model_selection": "Validation recall under5% FPR, AP tie-break",
+  "pr_auc": "Average precision(AP) primary; trapezoidal PR-AUC also exported",
+  "equal_budget": "Fix budget fraction from validation LightGBM alert rate, then exact topK using unlabeled target-month scores; ties use seed42 row hash",
+  "fairness": "Same global frozen threshold, age<50 vs age>=50, FPR gap/ratio and Wilson95% intervals; include >50 sensitivity",
+  "monthly": "Months0-5 explicitly in-sample, month6 validation, month7 final held-out; no claim of eight independent out-of-time tests",
+  "uncertainty": "Wilson95% binomial intervals for held-out FPR/recall; paired stratified bootstrap500 for held-out same-budget teacher-minus-rules recall gap, fixed predictions",
+  "test_policy": "No month7 prediction or model selection before frozen_manifest.json is written; final evaluation code consumes frozen models only",
+  "post_hoc_extensions": {
+    "added": "2026-10-18, after the month-7 evaluation had been seen; exploratory, never re-selects the frozen winner",
+    "module": "src/extensions.py -> outputs/extensions.json",
+    "invariants": [
+      "frozen artifacts read only; SHA-256 recorded before/after and re-checked in src/verify.py",
+      "new fits use months 0-5; early stopping, thresholds and the recommended rule size use month 6 only; month 7 reported only"
+    ],
+    "rule_complexity": "DecisionTreeRegressor on teacher training log-odds, max_leaf_nodes in [5,8,12,16,24,32,48,64], min_samples_leaf 0.5%; whole-leaf threshold at validation FPR<=5%; recommended = fewest leaves with validation whole-leaf recall >= 90% of teacher validation recall; if no candidate reaches the target, report target_met=false and choose highest validation whole-leaf recall (fewest leaves breaks ties) as a fallback, not a target-achieving recommendation",
+    "feature_ablation": "LightGBM with frozen hyper-parameters (31 leaves, reg_lambda 10) refit after dropping: nothing (reproduction check), customer_age, velocity_6h+velocity_24h, all velocity_*",
+    "fairness": "base fraud rate per age group; no-age refit; per-group thresholds (each validation group FPR<=5%) as a trade-off reference only; age-proxy LightGBM predicting age>=50 from the other inputs",
+    "uncertainty": "paired positive-class bootstrap (500) for same-budget recall differences; stratified bootstrap (500) for AP differences; fixed predictions"
+  },
+  "post_hoc_rolling_backtest": {
+    "added": "2026-10-18, after all eight months had already been inspected; retrospective robustness only",
+    "module": "src/rolling_backtest.py -> outputs/rolling_backtest.json",
+    "windows": [
+      {
+        "train": [
+          0,
+          1,
+          2
+        ],
+        "validation": [
+          3
+        ],
+        "test": [
+          4
+        ]
+      },
+      {
+        "train": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "validation": [
+          4
+        ],
+        "test": [
+          5
+        ]
+      },
+      {
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "validation": [
+          5
+        ],
+        "test": [
+          6
+        ]
+      },
+      {
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "validation": [
+          6
+        ],
+        "test": [
+          7
+        ]
+      }
+    ],
+    "baseline_selection": "Each window independently selects among the original three paired LightGBM configurations using only its own validation recall under FPR<=5%, AP tie-break; no reuse of the final-window winner for earlier windows",
+    "ablations": [
+      "no_age",
+      "no_velocity_short",
+      "no_velocity_all"
+    ],
+    "ablation_hyperparameters": "Same as that window baseline, with independent validation early stopping and threshold selection",
+    "capacity": "Predeclared 5% of applications in every test month for all variants; distinct from the main experiment validation-derived 5.6412%",
+    "uncertainty": "500 paired age-by-label-stratified bootstrap draws on fixed predictions; no refitting or threshold re-estimation; monthly range is not a confidence interval",
+    "test_policy": "Persist per-window model/schema/validation predictions/threshold manifest before scoring its test month. Report all four variants; never choose a winner from retrospective test results. Preserve original main artifacts."
+  }
+}

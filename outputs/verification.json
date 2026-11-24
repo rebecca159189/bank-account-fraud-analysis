@@ -1,0 +1,2570 @@
+{
+  "passed": true,
+  "count": 641,
+  "checks": [
+    {
+      "check": "validation/test row IDs disjoint",
+      "passed": true
+    },
+    {
+      "check": "full validation/test sizes",
+      "passed": true
+    },
+    {
+      "check": "full validation/test fraud counts",
+      "passed": true
+    },
+    {
+      "check": "logistic_regression: saved TP/FP independently reconcile",
+      "passed": true
+    },
+    {
+      "check": "logistic_regression: saved alert flag reconciles",
+      "passed": true
+    },
+    {
+      "check": "logistic_regression: validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "logistic_regression: exact same-budget alert count",
+      "passed": true
+    },
+    {
+      "check": "lightgbm: saved TP/FP independently reconcile",
+      "passed": true
+    },
+    {
+      "check": "lightgbm: saved alert flag reconciles",
+      "passed": true
+    },
+    {
+      "check": "lightgbm: validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "lightgbm: exact same-budget alert count",
+      "passed": true
+    },
+    {
+      "check": "mlp: saved TP/FP independently reconcile",
+      "passed": true
+    },
+    {
+      "check": "mlp: saved alert flag reconciles",
+      "passed": true
+    },
+    {
+      "check": "mlp: validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "mlp: exact same-budget alert count",
+      "passed": true
+    },
+    {
+      "check": "isolation_forest: saved TP/FP independently reconcile",
+      "passed": true
+    },
+    {
+      "check": "isolation_forest: saved alert flag reconciles",
+      "passed": true
+    },
+    {
+      "check": "isolation_forest: validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "isolation_forest: exact same-budget alert count",
+      "passed": true
+    },
+    {
+      "check": "distilled_tree: saved TP/FP independently reconcile",
+      "passed": true
+    },
+    {
+      "check": "distilled_tree: saved alert flag reconciles",
+      "passed": true
+    },
+    {
+      "check": "distilled_tree: validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "distilled_tree: exact same-budget alert count",
+      "passed": true
+    },
+    {
+      "check": "logistic_regression: same-budget catches reconcile",
+      "passed": true
+    },
+    {
+      "check": "lightgbm: same-budget catches reconcile",
+      "passed": true
+    },
+    {
+      "check": "mlp: same-budget catches reconcile",
+      "passed": true
+    },
+    {
+      "check": "isolation_forest: same-budget catches reconcile",
+      "passed": true
+    },
+    {
+      "check": "distilled_tree: same-budget catches reconcile",
+      "passed": true
+    },
+    {
+      "check": "logistic_regression: age groups partition test confusion matrix",
+      "passed": true
+    },
+    {
+      "check": "lightgbm: age groups partition test confusion matrix",
+      "passed": true
+    },
+    {
+      "check": "mlp: age groups partition test confusion matrix",
+      "passed": true
+    },
+    {
+      "check": "isolation_forest: age groups partition test confusion matrix",
+      "passed": true
+    },
+    {
+      "check": "distilled_tree: age groups partition test confusion matrix",
+      "passed": true
+    },
+    {
+      "check": "five mutually exclusive rules cover test",
+      "passed": true
+    },
+    {
+      "check": "rule fraud counts reconcile",
+      "passed": true
+    },
+    {
+      "check": "SHAP raw-score additivity",
+      "passed": true
+    },
+    {
+      "check": "handcrafted threshold tie case: no normal and one fraud",
+      "passed": true
+    },
+    {
+      "check": "extensions.json is strict JSON (no NaN/Infinity)",
+      "passed": true
+    },
+    {
+      "check": "PSI recomputation matches EDA table",
+      "passed": true
+    },
+    {
+      "check": "supplementary stage left frozen artifacts unchanged",
+      "passed": true
+    },
+    {
+      "check": "supplementary refit reproduces frozen LightGBM",
+      "passed": true
+    },
+    {
+      "check": "frozen schema is included in supplementary integrity checks",
+      "passed": true
+    },
+    {
+      "check": "rule target/fallback status is explicit and correct",
+      "passed": true
+    },
+    {
+      "check": "rule achieved target fraction reconciles",
+      "passed": true
+    },
+    {
+      "check": "supplementary scores align with frozen test rows",
+      "passed": true
+    },
+    {
+      "check": "rules_5__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_5__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "rules_8__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_8__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "rules_12__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_12__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "rules_16__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_16__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "rules_24__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_24__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "rules_32__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_32__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "rules_48__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_48__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "rules_64__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "rules_64__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "recommended_rules__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "recommended_rules__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "reference_refit__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "reference_refit__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "no_age__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "no_age__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_short__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_short__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_all__alert_topk: exact same-budget K",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_all__alert_topk: flags match deterministic score ranking",
+      "passed": true
+    },
+    {
+      "check": "supplementary artifacts have a persisted manifest",
+      "passed": true
+    },
+    {
+      "check": "supplementary artifact manifest hash matches",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_5.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_8.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_12.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_16.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_24.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_32.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_48.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/rules_64.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/recommended_rules.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/reference_refit.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/extension_models/age_proxy.joblib",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/predictions/ext_validation_scores.parquet",
+      "passed": true
+    },
+    {
+      "check": "persisted supplementary artifact hash: outputs/predictions/ext_test_scores.parquet",
+      "passed": true
+    },
+    {
+      "check": "supplementary source revision: src/common.py",
+      "passed": true
+    },
+    {
+      "check": "supplementary source revision: src/eda.py",
+      "passed": true
+    },
+    {
+      "check": "supplementary source revision: src/extensions.py",
+      "passed": true
+    },
+    {
+      "check": "supplementary validation predictions align",
+      "passed": true
+    },
+    {
+      "check": "reference_refit: held-out AP, frozen recall/FPR and exact-K TP reconcile",
+      "passed": true
+    },
+    {
+      "check": "reference_refit: saved threshold is selected only from saved validation predictions",
+      "passed": true
+    },
+    {
+      "check": "no_age: held-out AP, frozen recall/FPR and exact-K TP reconcile",
+      "passed": true
+    },
+    {
+      "check": "no_age: saved threshold is selected only from saved validation predictions",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_short: held-out AP, frozen recall/FPR and exact-K TP reconcile",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_short: saved threshold is selected only from saved validation predictions",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_all: held-out AP, frozen recall/FPR and exact-K TP reconcile",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_all: saved threshold is selected only from saved validation predictions",
+      "passed": true
+    },
+    {
+      "check": "rules_5: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "rules_8: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "rules_12: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "rules_16: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "rules_24: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "rules_32: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "rules_48: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "rules_64: whole-leaf held-out counts and AP reconcile",
+      "passed": true
+    },
+    {
+      "check": "recommended rules partition the test month",
+      "passed": true
+    },
+    {
+      "check": "recommended whole-leaf alerts reconcile",
+      "passed": true
+    },
+    {
+      "check": "global_threshold/test: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "group_thresholds/test: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "main_same_k/test: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "no_age_model/test: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "no_age_same_k/test: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "global_threshold/validation: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "group_thresholds/validation: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "main_same_k/validation: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "no_age_model/validation: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "no_age_same_k/validation: age groups partition rows",
+      "passed": true
+    },
+    {
+      "check": "per-group thresholds keep each validation group FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "global_threshold/age<50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "global_threshold/age>=50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "no_age_model/age<50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "no_age_model/age>=50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "group_thresholds/age<50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "group_thresholds/age>=50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "main_same_k/age<50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "main_same_k/age>=50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "no_age_same_k/age<50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "no_age_same_k/age>=50: base rate = fraud/n",
+      "passed": true
+    },
+    {
+      "check": "email_is_free: binary PSI preserves both value bins",
+      "passed": true
+    },
+    {
+      "check": "phone_home_valid: binary PSI preserves both value bins",
+      "passed": true
+    },
+    {
+      "check": "phone_mobile_valid: binary PSI preserves both value bins",
+      "passed": true
+    },
+    {
+      "check": "has_other_cards: binary PSI preserves both value bins",
+      "passed": true
+    },
+    {
+      "check": "foreign_request: binary PSI preserves both value bins",
+      "passed": true
+    },
+    {
+      "check": "keep_alive_session: binary PSI preserves both value bins",
+      "passed": true
+    },
+    {
+      "check": "rules_5/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_8/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_12/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_16/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_24/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_32/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_48/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_64/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "recommended_rules/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "reference_refit/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "no_age/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_short/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_all/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "age_proxy/validation: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "age proxy/validation: AUC reconciles",
+      "passed": true
+    },
+    {
+      "check": "rules_5/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_8/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_12/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_16/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_24/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_32/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_48/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "rules_64/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "recommended_rules/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "reference_refit/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "no_age/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_short/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "no_velocity_all/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "age_proxy/test: saved model reproduces stored sample scores",
+      "passed": true
+    },
+    {
+      "check": "age proxy/test: AUC reconciles",
+      "passed": true
+    },
+    {
+      "check": "rolling: supported strict JSON schema",
+      "passed": true
+    },
+    {
+      "check": "rolling: embedded protocol and hash match",
+      "passed": true
+    },
+    {
+      "check": "rolling: current producer source matches protocol revision",
+      "passed": true
+    },
+    {
+      "check": "rolling: original raw source hash matches",
+      "passed": true
+    },
+    {
+      "check": "rolling: common review rate is exactly 5%",
+      "passed": true
+    },
+    {
+      "check": "rolling: frozen main artifacts unchanged",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_5_test.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_5_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_6_test.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_6_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_7_test.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_7_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_8_test.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/predictions/window_8_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_5/baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_5/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_5/no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_5/no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_5/no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_5/schema.json",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_6/baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_6/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_6/no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_6/no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_6/no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_6/schema.json",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_7/baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_7/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_7/no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_7/no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_7/no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_7/schema.json",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_8/baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_8/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_8/no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_8/no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_8/no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "rolling artifact hash: outputs/rolling/models/window_8/schema.json",
+      "passed": true
+    },
+    {
+      "check": "rolling: every metric row has a unique window/variant/split/policy",
+      "passed": true
+    },
+    {
+      "check": "rolling: fairness and difference rows are complete and unique",
+      "passed": true
+    },
+    {
+      "check": "rolling: declared windows are all present once",
+      "passed": true
+    },
+    {
+      "check": "rolling: every window has one frozen manifest",
+      "passed": true
+    },
+    {
+      "check": "window_5: strict chronological train/validation/test isolation",
+      "passed": true
+    },
+    {
+      "check": "window_5: choices were frozen against the declared protocol",
+      "passed": true
+    },
+    {
+      "check": "window_5: pre-test artifact hash baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_5: pre-test artifact hash no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_5: pre-test artifact hash no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_5: pre-test artifact hash no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_5: pre-test artifact hash schema.json",
+      "passed": true
+    },
+    {
+      "check": "window_5: pre-test artifact hash window_5_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "window_5: schema constants/categories come only from training rows",
+      "passed": true
+    },
+    {
+      "check": "window_5: training row count matches raw month membership",
+      "passed": true
+    },
+    {
+      "check": "window_5/validation: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_5/validation: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_5/test: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_5/test: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_5: held-out fraud count matches raw labels",
+      "passed": true
+    },
+    {
+      "check": "window_5: baseline candidate configurations match the protocol",
+      "passed": true
+    },
+    {
+      "check": "window_5/candidate15: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_5/candidate15: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/candidate31: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_5/candidate31: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/candidate63: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_5/candidate63: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_5: baseline is selected by validation recall/AP with stable candidate ties",
+      "passed": true
+    },
+    {
+      "check": "window_5: variant drop definitions match protocol",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/baseline/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_age: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_short: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_5/no_velocity_all: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_6: strict chronological train/validation/test isolation",
+      "passed": true
+    },
+    {
+      "check": "window_6: choices were frozen against the declared protocol",
+      "passed": true
+    },
+    {
+      "check": "window_6: pre-test artifact hash baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_6: pre-test artifact hash no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_6: pre-test artifact hash no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_6: pre-test artifact hash no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_6: pre-test artifact hash schema.json",
+      "passed": true
+    },
+    {
+      "check": "window_6: pre-test artifact hash window_6_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "window_6: schema constants/categories come only from training rows",
+      "passed": true
+    },
+    {
+      "check": "window_6: training row count matches raw month membership",
+      "passed": true
+    },
+    {
+      "check": "window_6/validation: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_6/validation: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_6/test: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_6/test: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_6: held-out fraud count matches raw labels",
+      "passed": true
+    },
+    {
+      "check": "window_6: baseline candidate configurations match the protocol",
+      "passed": true
+    },
+    {
+      "check": "window_6/candidate15: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_6/candidate15: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/candidate31: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_6/candidate31: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/candidate63: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_6/candidate63: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_6: baseline is selected by validation recall/AP with stable candidate ties",
+      "passed": true
+    },
+    {
+      "check": "window_6: variant drop definitions match protocol",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/baseline/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_age: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_short: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_6/no_velocity_all: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_7: strict chronological train/validation/test isolation",
+      "passed": true
+    },
+    {
+      "check": "window_7: choices were frozen against the declared protocol",
+      "passed": true
+    },
+    {
+      "check": "window_7: pre-test artifact hash baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_7: pre-test artifact hash no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_7: pre-test artifact hash no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_7: pre-test artifact hash no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_7: pre-test artifact hash schema.json",
+      "passed": true
+    },
+    {
+      "check": "window_7: pre-test artifact hash window_7_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "window_7: schema constants/categories come only from training rows",
+      "passed": true
+    },
+    {
+      "check": "window_7: training row count matches raw month membership",
+      "passed": true
+    },
+    {
+      "check": "window_7/validation: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_7/validation: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_7/test: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_7/test: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_7: held-out fraud count matches raw labels",
+      "passed": true
+    },
+    {
+      "check": "window_7: baseline candidate configurations match the protocol",
+      "passed": true
+    },
+    {
+      "check": "window_7/candidate15: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_7/candidate15: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/candidate31: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_7/candidate31: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/candidate63: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_7/candidate63: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_7: baseline is selected by validation recall/AP with stable candidate ties",
+      "passed": true
+    },
+    {
+      "check": "window_7: variant drop definitions match protocol",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/baseline/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_age: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_short: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_7/no_velocity_all: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_8: strict chronological train/validation/test isolation",
+      "passed": true
+    },
+    {
+      "check": "window_8: choices were frozen against the declared protocol",
+      "passed": true
+    },
+    {
+      "check": "window_8: pre-test artifact hash baseline.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_8: pre-test artifact hash no_age.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_8: pre-test artifact hash no_velocity_all.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_8: pre-test artifact hash no_velocity_short.joblib",
+      "passed": true
+    },
+    {
+      "check": "window_8: pre-test artifact hash schema.json",
+      "passed": true
+    },
+    {
+      "check": "window_8: pre-test artifact hash window_8_validation.parquet",
+      "passed": true
+    },
+    {
+      "check": "window_8: schema constants/categories come only from training rows",
+      "passed": true
+    },
+    {
+      "check": "window_8: training row count matches raw month membership",
+      "passed": true
+    },
+    {
+      "check": "window_8/validation: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_8/validation: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_8/test: exact raw IDs, month, labels and age match",
+      "passed": true
+    },
+    {
+      "check": "window_8/test: saved sample size and exact 5% capacity match",
+      "passed": true
+    },
+    {
+      "check": "window_8: held-out fraud count matches raw labels",
+      "passed": true
+    },
+    {
+      "check": "window_8: baseline candidate configurations match the protocol",
+      "passed": true
+    },
+    {
+      "check": "window_8/candidate15: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_8/candidate15: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/candidate31: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_8/candidate31: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/candidate63: validation arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window_8/candidate63: threshold derives only from validation scores",
+      "passed": true
+    },
+    {
+      "check": "window_8: baseline is selected by validation recall/AP with stable candidate ties",
+      "passed": true
+    },
+    {
+      "check": "window_8: variant drop definitions match protocol",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all: ablation inherits baseline hyperparameters",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all: frozen threshold rederived from validation only",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/validation: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all: whole-tie validation FPR<=5%",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all: manifest validation metrics reconcile",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/validation/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/validation/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/test: frozen and exact-K saved flags match independent ranking",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/test/frozen_threshold: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/frozen_threshold: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/test/fixed_review_5pct: AP, ROC, confusion matrix and intervals",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/fixed_review_5pct: age fairness denominators and rates",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/validation: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/validation: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/test: model input schema excludes label/month and matches saved columns",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/test: independently reconstructed inputs reproduce scores",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all: paired variant-minus-baseline point estimates",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all: all paired interval endpoints are finite and ordered",
+      "passed": true
+    },
+    {
+      "check": "window_8/validation: full score arrays align with frozen/supplementary rows",
+      "passed": true
+    },
+    {
+      "check": "window_8/validation: full baseline scores exactly reproduce frozen LightGBM",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/validation: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/validation: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/validation: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/validation: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "window_8/test: full score arrays align with frozen/supplementary rows",
+      "passed": true
+    },
+    {
+      "check": "window_8/test: full baseline scores exactly reproduce frozen LightGBM",
+      "passed": true
+    },
+    {
+      "check": "window_8/baseline/test: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_age/test: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_short/test: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "window_8/no_velocity_all/test: full scores reproduce same-configuration extension refit",
+      "passed": true
+    },
+    {
+      "check": "rolling: observed month ranges are explicitly not confidence intervals",
+      "passed": true
+    },
+    {
+      "check": "rolling: baseline observed ranges reconcile for frozen_threshold",
+      "passed": true
+    },
+    {
+      "check": "rolling: baseline observed ranges reconcile for fixed_review_5pct",
+      "passed": true
+    },
+    {
+      "check": "rolling: descriptive win counts reconcile for no_age",
+      "passed": true
+    },
+    {
+      "check": "rolling: descriptive win counts reconcile for no_velocity_short",
+      "passed": true
+    },
+    {
+      "check": "rolling: descriptive win counts reconcile for no_velocity_all",
+      "passed": true
+    },
+    {
+      "check": "coursework: all six parts present",
+      "passed": true
+    },
+    {
+      "check": "coursework: every number finite (no NaN/Inf)",
+      "passed": true
+    },
+    {
+      "check": "coursework: frozen artifact hashes identical before and after",
+      "passed": true
+    },
+    {
+      "check": "coursework: recorded hashes match the files on disk now",
+      "passed": true
+    },
+    {
+      "check": "coursework: logistic_regression reference row reproduces frozen test metrics",
+      "passed": true
+    },
+    {
+      "check": "coursework: lightgbm reference row reproduces frozen test metrics",
+      "passed": true
+    },
+    {
+      "check": "coursework: smote row 'LR 类别权重（冻结参考）' rates within [0,1]",
+      "passed": true
+    },
+    {
+      "check": "coursework: smote row 'LightGBM scale_pos_weight（冻结参考）' rates within [0,1]",
+      "passed": true
+    },
+    {
+      "check": "coursework: smote row 'LR 不处理不平衡' rates within [0,1]",
+      "passed": true
+    },
+    {
+      "check": "coursework: smote row 'LR + SMOTE（少数类补到 1:1）' rates within [0,1]",
+      "passed": true
+    },
+    {
+      "check": "coursework: smote row 'LightGBM 不处理不平衡（scale_pos_weight=1）' rates within [0,1]",
+      "passed": true
+    },
+    {
+      "check": "coursework: split study has random and time rows with CV folds",
+      "passed": true
+    },
+    {
+      "check": "coursework: figure cw_skewness.png exists",
+      "passed": true
+    },
+    {
+      "check": "coursework: figure cw_outlier_lift.png exists",
+      "passed": true
+    },
+    {
+      "check": "coursework: figure cw_distribution_by_label.png exists",
+      "passed": true
+    },
+    {
+      "check": "coursework: figure cw_correlation_heatmap.png exists",
+      "passed": true
+    },
+    {
+      "check": "coursework: figure cw_split_comparison.png exists",
+      "passed": true
+    },
+    {
+      "check": "coursework: figure cw_imbalance_methods.png exists",
+      "passed": true
+    },
+    {
+      "check": "features: all four parts present",
+      "passed": true
+    },
+    {
+      "check": "features: every number finite (no NaN/Inf)",
+      "passed": true
+    },
+    {
+      "check": "features: frozen artifact hashes identical before and after",
+      "passed": true
+    },
+    {
+      "check": "features: recorded hashes match the files on disk now",
+      "passed": true
+    },
+    {
+      "check": "features: IV non-negative for every field",
+      "passed": true
+    },
+    {
+      "check": "features: keep/drop flags follow the stated IV/PSI rule",
+      "passed": true
+    },
+    {
+      "check": "features: dropped list equals rule result",
+      "passed": true
+    },
+    {
+      "check": "features: IV of housing_status reproduces independently",
+      "passed": true
+    },
+    {
+      "check": "features: same-recipe refit reproduces frozen LightGBM scores",
+      "passed": true
+    },
+    {
+      "check": "features: frozen reference row equals evaluation.json",
+      "passed": true
+    },
+    {
+      "check": "features: month-6 choice follows recall-then-AP rule",
+      "passed": true
+    },
+    {
+      "check": "features: derived-study reference equals selection-study reference",
+      "passed": true
+    },
+    {
+      "check": "features: four rolling windows with ordered intervals",
+      "passed": true
+    },
+    {
+      "check": "features: rolling windows never train on their own test month",
+      "passed": true
+    },
+    {
+      "check": "features: importance ranks within 1..n",
+      "passed": true
+    },
+    {
+      "check": "features: figure fs_iv_psi.png exists",
+      "passed": true
+    },
+    {
+      "check": "features: figure fs_woe_top.png exists",
+      "passed": true
+    },
+    {
+      "check": "features: figure fs_derived.png exists",
+      "passed": true
+    },
+    {
+      "check": "features: figure fs_importance.png exists",
+      "passed": true
+    }
+  ]
+}

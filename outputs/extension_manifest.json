@@ -1,0 +1,212 @@
+{
+  "artifact_version": 2,
+  "seed": 42,
+  "source_sha256": "7bf10a37ce07e72e14c1b09e5efee3d27261baff4facc7da767b0474dcf9b809",
+  "frozen_source_hashes": {
+    "outputs/models/frozen_manifest.json": "ed72dd01b8e39922173e0015ff1876217d0ba3a9a57bbf5812ba7a95ea2a430f",
+    "outputs/models/lightgbm.joblib": "c47e4bb0d025d7eec02bff47073b0683d69c704d0400be91644a214fefdd2109",
+    "outputs/models/distilled_tree.joblib": "240dcaf6faf1a5de9cdd1d581cd5271be03d9276ec93a2bb37d38c78b07a5044",
+    "outputs/models/preprocessor.joblib": "64bbec37842955cf149292fd9670bec640f059ae72fe4c89e9d43c6ef59b9525",
+    "outputs/models/schema.json": "cccd254834f339db9073a4c681b84c85b301039cfbd7d7897bd4cd8a2906dae4",
+    "outputs/models/logistic_regression.joblib": "16a4dada8a542d2d71c0fd37949f575b24dbb13df4d23db63018e844261cc327",
+    "outputs/models/mlp.joblib": "c929f1aef361730b94297be71e48ddec15ab9b15a85cde284182d9a3a5eb83f1",
+    "outputs/models/isolation_forest.joblib": "861c53d882ceb51ed906640f91656e65b038d3713cf468a090ad6f3461062e64",
+    "outputs/evaluation.json": "33afdade6d83e74a9659ec5833d7abcbb902eb799b72a795f042c7b2a961f677",
+    "outputs/explanation.json": "bf3ca392780c0cbb4fc52918c75d3ff9b72d26607b695a569c7b80044320e443",
+    "outputs/predictions/validation.parquet": "c403c46e9434f7cae8434e86890efe18cda833b9b911fb1b8198918fdf9d2f64",
+    "outputs/predictions/test.parquet": "04ba29e5024f3d379f13a56c2bba3c0e584707461291882ceded9c0203d58516"
+  },
+  "models": {
+    "rules_5": "outputs/extension_models/rules_5.joblib",
+    "rules_8": "outputs/extension_models/rules_8.joblib",
+    "rules_12": "outputs/extension_models/rules_12.joblib",
+    "rules_16": "outputs/extension_models/rules_16.joblib",
+    "rules_24": "outputs/extension_models/rules_24.joblib",
+    "rules_32": "outputs/extension_models/rules_32.joblib",
+    "rules_48": "outputs/extension_models/rules_48.joblib",
+    "rules_64": "outputs/extension_models/rules_64.joblib",
+    "recommended_rules": "outputs/extension_models/recommended_rules.joblib",
+    "reference_refit": "outputs/extension_models/reference_refit.joblib",
+    "no_age": "outputs/extension_models/no_age.joblib",
+    "no_velocity_short": "outputs/extension_models/no_velocity_short.joblib",
+    "no_velocity_all": "outputs/extension_models/no_velocity_all.joblib",
+    "age_proxy": "outputs/extension_models/age_proxy.joblib"
+  },
+  "predictions": {
+    "validation": "outputs/predictions/ext_validation_scores.parquet",
+    "test": "outputs/predictions/ext_test_scores.parquet"
+  },
+  "artifact_sha256": {
+    "outputs/extension_models/rules_5.joblib": "d68bcb8e6ce67eb00c53de397b9f787bc3c2a3ead61ef895f7dc19a055a8fafa",
+    "outputs/extension_models/rules_8.joblib": "bd15f693f93a9dc127caec5d7c0258a79ba925ce682240815f9b0180daa0ba24",
+    "outputs/extension_models/rules_12.joblib": "477bb99bc3a949954d562ee601a65d56277b9a0c49774e15dcb908a417d4c620",
+    "outputs/extension_models/rules_16.joblib": "ac680fc13149a9de7b20c59e274c23a297f587b16b1cdcd9e512b020efb353df",
+    "outputs/extension_models/rules_24.joblib": "727ee8238e81ab3d9f9fbb7f8f6c49569eda44fd683aea128ea5783539e1841a",
+    "outputs/extension_models/rules_32.joblib": "e92dee634da571c70b636b31f0ab98dadda8f57f7a257c19a45bfaaa9abd9b0f",
+    "outputs/extension_models/rules_48.joblib": "f385fab5afbbbedb65fab8b435b40b5d2dacb1b16111620404bf0aaba232370e",
+    "outputs/extension_models/rules_64.joblib": "15287e63fcffdd486f1fad88e045c3b8e3903c8911c234e828cc0d95b0e6913d",
+    "outputs/extension_models/recommended_rules.joblib": "15287e63fcffdd486f1fad88e045c3b8e3903c8911c234e828cc0d95b0e6913d",
+    "outputs/extension_models/reference_refit.joblib": "c47e4bb0d025d7eec02bff47073b0683d69c704d0400be91644a214fefdd2109",
+    "outputs/extension_models/no_age.joblib": "3e3f2d3ee15ac231e090fbcaa9481bfcab44b85002d5603a93281c84b358efa2",
+    "outputs/extension_models/no_velocity_short.joblib": "94c1d41091945d48a4c094d294b7bcaeb4a29a514a1f14cf2fb6150b07bff15d",
+    "outputs/extension_models/no_velocity_all.joblib": "16ba1fe1393a7e5fbdf4e65be01692de3175f06882060728d57e25d853cf8ee6",
+    "outputs/extension_models/age_proxy.joblib": "a4647c65c6e9f2f5018f6efd8644ea9a9be8ad60db22e78631c4b3e436151d39",
+    "outputs/predictions/ext_validation_scores.parquet": "2bef7bc6d17160183916c8b67bf05465ed9deef2be8d1378fbe744acb60081a6",
+    "outputs/predictions/ext_test_scores.parquet": "2331bc7f3d50fd54f196b92bd2c600fdaf6494dd03f2282a8875421541b3cedf"
+  },
+  "source_code_sha256": {
+    "src/common.py": "fdbbcd39c987c301a84345307f484e4464e162a686799b53fb48996852ee2c47",
+    "src/eda.py": "c92b2f4fc0ed897e7ba788afe78ab5837bf5ceae8060f614bb9a587bcf3cc4c0",
+    "src/extensions.py": "be59b7d63052f7ba3690e63c3136a37f943b2d5019b303e591181355247d1e91"
+  },
+  "variants": {
+    "reference_refit": {
+      "dropped_columns": [],
+      "threshold": 0.8145777187120082,
+      "num_leaves": 31,
+      "reg_lambda": 10.0
+    },
+    "no_age": {
+      "dropped_columns": [
+        "customer_age"
+      ],
+      "threshold": 0.819892576634232,
+      "num_leaves": 31,
+      "reg_lambda": 10.0
+    },
+    "no_velocity_short": {
+      "dropped_columns": [
+        "velocity_6h",
+        "velocity_24h"
+      ],
+      "threshold": 0.8237855068638994,
+      "num_leaves": 31,
+      "reg_lambda": 10.0
+    },
+    "no_velocity_all": {
+      "dropped_columns": [
+        "velocity_6h",
+        "velocity_24h",
+        "velocity_4w"
+      ],
+      "threshold": 0.8078874494813133,
+      "num_leaves": 31,
+      "reg_lambda": 10.0
+    }
+  },
+  "rule_selection": {
+    "leaf_grid": [
+      5,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "selection_rule": "fewest leaves meeting the validation target; if none, highest validation recall, then fewest leaves",
+    "target_fraction_of_teacher": 0.9,
+    "target_validation_recall": 0.47606896551724137,
+    "target_met": false,
+    "fallback_used": true,
+    "fallback_reason": "No candidate reached the validation recall target within the declared leaf grid.",
+    "achieved_fraction_of_teacher": 0.6401564537157757,
+    "selection_split": "validation month 6",
+    "test_used_for_selection": false,
+    "teacher_validation_recall": 0.5289655172413793,
+    "chosen_leaves": 64,
+    "chosen_threshold": 0.9400094274922253,
+    "chosen_validation": {
+      "n": 108168,
+      "fraud": 1450,
+      "tp": 491,
+      "fp": 4578,
+      "fn": 959,
+      "tn": 102140,
+      "recall": 0.3386206896551724,
+      "fpr": 0.04289810528683071,
+      "precision": 0.09686328664430854,
+      "alerts": 5069,
+      "alert_rate": 0.04686228829228607,
+      "ap": 0.0743578455191905
+    },
+    "chosen_test": {
+      "n": 96843,
+      "fraud": 1428,
+      "tp": 492,
+      "fp": 3394,
+      "fn": 936,
+      "tn": 92021,
+      "recall": 0.3445378151260504,
+      "fpr": 0.03557092700309176,
+      "precision": 0.12660833762223367,
+      "alerts": 3886,
+      "alert_rate": 0.040126803176275004,
+      "ap": 0.0919299095987905,
+      "recall_ci": [
+        0.3203367618329762,
+        0.3695730411938958
+      ],
+      "fpr_ci": [
+        0.03441427033464594,
+        0.036764978490669196
+      ]
+    },
+    "teacher_test_frozen": {
+      "n": 96843,
+      "fraud": 1428,
+      "tp": 761,
+      "fp": 4175,
+      "fn": 667,
+      "tn": 91240,
+      "recall": 0.5329131652661064,
+      "fpr": 0.04375622281611906,
+      "precision": 0.15417341977309562,
+      "alerts": 4936,
+      "alert_rate": 0.05096909430728086
+    },
+    "teacher_test_same_budget": {
+      "n": 96843,
+      "fraud": 1428,
+      "tp": 784,
+      "fp": 4679,
+      "fn": 644,
+      "tn": 90736,
+      "recall": 0.5490196078431373,
+      "fpr": 0.04903841115128649,
+      "precision": 0.14351089145158338,
+      "alerts": 5463,
+      "alert_rate": 0.05641089185589046
+    },
+    "same_budget_recall_gap_teacher_minus_rules": 0.14705882352941177,
+    "same_budget_gap_bootstrap95": [
+      0.12078081232492997,
+      0.17543767507002797
+    ],
+    "test_k": 5463,
+    "note": "Whole-leaf rules alert every row in an alerted leaf; no row-hash sampling is needed for this operating point."
+  },
+  "rule_curve_thresholds": {
+    "rules_5": 0.10016617032732615,
+    "rules_8": 1.0011696801811174,
+    "rules_12": 1.0011696801811174,
+    "rules_16": 1.0011696801811174,
+    "rules_24": 1.0011696801811174,
+    "rules_32": 0.6532110963500842,
+    "rules_48": 0.6532110963500842,
+    "rules_64": 0.9400094274922253
+  },
+  "bootstrap": {
+    "replicates": 500,
+    "seed": 42,
+    "conditioning": "fixed predictions and K; positive-class paired recall bootstrap; class-stratified paired AP bootstrap; no retraining or re-ranking"
+  },
+  "environment": {
+    "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "lightgbm": "4.7.0"
+  }
+}

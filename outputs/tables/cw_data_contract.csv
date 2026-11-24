@@ -1,0 +1,28 @@
+﻿field,rule,observed_min,observed_max,violations
+income,"datasheet range [0.1, 0.9]",0.10000000149011612,0.8999999761581421,0
+name_email_similarity,"datasheet range [0, 1]",1.4345505405799486e-06,0.9999993443489075,0
+prev_address_months_count,"datasheet range [-1, 380]",-1.0,383.0,2
+current_address_months_count,"datasheet range [-1, 429]",-1.0,428.0,0
+customer_age,"datasheet range [10, 90]",10.0,90.0,0
+days_since_request,"datasheet range [0, 79]",4.036859735379039e-09,78.45690155029297,0
+intended_balcon_amount,"datasheet range [-16, 114]",-15.53055477142334,112.95692443847656,0
+zip_count_4w,"datasheet range [1, 6830]",1.0,6700.0,0
+velocity_6h,"datasheet range [-175, 16818]",-170.6030731201172,16715.564453125,0
+velocity_24h,"datasheet range [1297, 9586]",1300.307373046875,9506.896484375,0
+velocity_4w,"datasheet range [2825, 7020]",2825.748291015625,6994.76416015625,0
+bank_branch_count_8w,"datasheet range [0, 2404]",0.0,2385.0,0
+date_of_birth_distinct_emails_4w,"datasheet range [0, 39]",0.0,39.0,0
+credit_risk_score,"datasheet range [-191, 389]",-170.0,389.0,0
+bank_months_count,"datasheet range [-1, 32]",-1.0,32.0,0
+proposed_credit_limit,"datasheet range [200, 2000]",190.0,2100.0,204
+session_length_in_minutes,"datasheet range [-1, 107]",-1.0,85.89913940429688,0
+device_distinct_emails_8w,"datasheet range [-1, 2]",-1.0,2.0,0
+device_fraud_count,"datasheet range [0, 1]",0.0,0.0,0
+month,"datasheet range [0, 7]",0.0,7.0,0
+email_is_free,"value in {0,1}",0.0,1.0,0
+phone_home_valid,"value in {0,1}",0.0,1.0,0
+phone_mobile_valid,"value in {0,1}",0.0,1.0,0
+has_other_cards,"value in {0,1}",0.0,1.0,0
+foreign_request,"value in {0,1}",0.0,1.0,0
+keep_alive_session,"value in {0,1}",0.0,1.0,0
+fraud_bool,"value in {0,1}",0.0,1.0,0

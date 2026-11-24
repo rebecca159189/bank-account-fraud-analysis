@@ -1,0 +1,433 @@
+{
+  "source_path": "D:\\bank_fraud_analysis\\data\\raw\\Base.csv",
+  "source_bytes": 213427735,
+  "rows": 1000000,
+  "columns": 32,
+  "raw_memory_bytes": 480720944,
+  "fraud": {
+    "rows": 1000000,
+    "fraud_count": 11029,
+    "legitimate_count": 988971,
+    "fraud_rate": 0.011029
+  },
+  "native_missing_cells": 0,
+  "duplicate_rows_including_label_and_month": 0,
+  "constant_columns": [
+    "device_fraud_count"
+  ],
+  "month_values": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "month_is_monotonic_in_source": true,
+  "split_months": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "validation": [
+      6
+    ],
+    "test": [
+      7
+    ]
+  },
+  "missing_rules": {
+    "prev_address_months_count": "value == -1",
+    "current_address_months_count": "value == -1",
+    "bank_months_count": "value == -1",
+    "session_length_in_minutes": "value == -1",
+    "device_distinct_emails_8w": "value == -1",
+    "intended_balcon_amount": "value < 0"
+  },
+  "negative_values_retained": [
+    "velocity_6h",
+    "credit_risk_score"
+  ],
+  "sentinel_missing_cells_excluding_native_nulls": 1715706,
+  "missing_by_feature": [
+    {
+      "column": "prev_address_months_count",
+      "effective_missing_count": 712920,
+      "effective_missing_fraction": 0.71292
+    },
+    {
+      "column": "current_address_months_count",
+      "effective_missing_count": 4254,
+      "effective_missing_fraction": 0.004254
+    },
+    {
+      "column": "intended_balcon_amount",
+      "effective_missing_count": 742523,
+      "effective_missing_fraction": 0.742523
+    },
+    {
+      "column": "bank_months_count",
+      "effective_missing_count": 253635,
+      "effective_missing_fraction": 0.253635
+    },
+    {
+      "column": "session_length_in_minutes",
+      "effective_missing_count": 2015,
+      "effective_missing_fraction": 0.002015
+    },
+    {
+      "column": "device_distinct_emails_8w",
+      "effective_missing_count": 359,
+      "effective_missing_fraction": 0.000359
+    }
+  ],
+  "monthly": [
+    {
+      "month": 0,
+      "split": "train",
+      "rows": 132440,
+      "fraud_count": 1500,
+      "legitimate_count": 130940,
+      "fraud_rate": 0.011325883418906675
+    },
+    {
+      "month": 1,
+      "split": "train",
+      "rows": 127620,
+      "fraud_count": 1198,
+      "legitimate_count": 126422,
+      "fraud_rate": 0.009387243378780755
+    },
+    {
+      "month": 2,
+      "split": "train",
+      "rows": 136979,
+      "fraud_count": 1198,
+      "legitimate_count": 135781,
+      "fraud_rate": 0.008745866154666044
+    },
+    {
+      "month": 3,
+      "split": "train",
+      "rows": 150936,
+      "fraud_count": 1392,
+      "legitimate_count": 149544,
+      "fraud_rate": 0.009222451900143107
+    },
+    {
+      "month": 4,
+      "split": "train",
+      "rows": 127691,
+      "fraud_count": 1452,
+      "legitimate_count": 126239,
+      "fraud_rate": 0.011371200789405674
+    },
+    {
+      "month": 5,
+      "split": "train",
+      "rows": 119323,
+      "fraud_count": 1411,
+      "legitimate_count": 117912,
+      "fraud_rate": 0.01182504630289215
+    },
+    {
+      "month": 6,
+      "split": "validation",
+      "rows": 108168,
+      "fraud_count": 1450,
+      "legitimate_count": 106718,
+      "fraud_rate": 0.013405073589231566
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "rows": 96843,
+      "fraud_count": 1428,
+      "legitimate_count": 95415,
+      "fraud_rate": 0.014745515938167962
+    }
+  ],
+  "split_summary": [
+    {
+      "split": "all",
+      "months": "0,1,2,3,4,5,6,7",
+      "rows": 1000000,
+      "fraud_count": 11029,
+      "legitimate_count": 988971,
+      "fraud_rate": 0.011029
+    },
+    {
+      "split": "train",
+      "months": "0,1,2,3,4,5",
+      "rows": 794989,
+      "fraud_count": 8151,
+      "legitimate_count": 786838,
+      "fraud_rate": 0.010252972053701372
+    },
+    {
+      "split": "validation",
+      "months": "6",
+      "rows": 108168,
+      "fraud_count": 1450,
+      "legitimate_count": 106718,
+      "fraud_rate": 0.013405073589231566
+    },
+    {
+      "split": "test",
+      "months": "7",
+      "rows": 96843,
+      "fraud_count": 1428,
+      "legitimate_count": 95415,
+      "fraud_rate": 0.014745515938167962
+    }
+  ],
+  "age_groups": [
+    {
+      "split": "all",
+      "age_group": "age < 50",
+      "rows": 816987,
+      "fraud_count": 6744,
+      "legitimate_count": 810243,
+      "fraud_rate": 0.008254721311355016,
+      "share_within_split": 0.816987
+    },
+    {
+      "split": "all",
+      "age_group": "age >= 50",
+      "rows": 183013,
+      "fraud_count": 4285,
+      "legitimate_count": 178728,
+      "fraud_rate": 0.023413637282597412,
+      "share_within_split": 0.183013
+    },
+    {
+      "split": "train",
+      "age_group": "age < 50",
+      "rows": 645755,
+      "fraud_count": 4855,
+      "legitimate_count": 640900,
+      "fraud_rate": 0.007518331255661977,
+      "share_within_split": 0.8122816793691485
+    },
+    {
+      "split": "train",
+      "age_group": "age >= 50",
+      "rows": 149234,
+      "fraud_count": 3296,
+      "legitimate_count": 145938,
+      "fraud_rate": 0.022086119785035583,
+      "share_within_split": 0.1877183206308515
+    },
+    {
+      "split": "validation",
+      "age_group": "age < 50",
+      "rows": 87056,
+      "fraud_count": 879,
+      "legitimate_count": 86177,
+      "fraud_rate": 0.010096949090240765,
+      "share_within_split": 0.8048221285407884
+    },
+    {
+      "split": "validation",
+      "age_group": "age >= 50",
+      "rows": 21112,
+      "fraud_count": 571,
+      "legitimate_count": 20541,
+      "fraud_rate": 0.027046229632436528,
+      "share_within_split": 0.1951778714592116
+    },
+    {
+      "split": "test",
+      "age_group": "age < 50",
+      "rows": 84176,
+      "fraud_count": 1010,
+      "legitimate_count": 83166,
+      "fraud_rate": 0.011998669454476335,
+      "share_within_split": 0.8692006649938561
+    },
+    {
+      "split": "test",
+      "age_group": "age >= 50",
+      "rows": 12667,
+      "fraud_count": 418,
+      "legitimate_count": 12249,
+      "fraud_rate": 0.03299913160179995,
+      "share_within_split": 0.13079933500614396
+    }
+  ],
+  "test_month_top_feature_psi": [
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "velocity_24h",
+      "psi": 2.322972190044047,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "continuous"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "velocity_6h",
+      "psi": 1.2244200880315044,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "continuous"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "credit_risk_score",
+      "psi": 0.2436155065474412,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "continuous"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "session_length_in_minutes",
+      "psi": 0.08838330119087709,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "continuous"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "income",
+      "psi": 0.0628420359816076,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "discrete"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "customer_age",
+      "psi": 0.0447771510761113,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "discrete"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "name_email_similarity",
+      "psi": 0.04131954402895518,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "continuous"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "housing_status",
+      "psi": 0.04072464377691387,
+      "bins_including_missing": 9,
+      "reference": "pooled months 0-5",
+      "binning": "categorical"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "payment_type",
+      "psi": 0.03964403054520816,
+      "bins_including_missing": 7,
+      "reference": "pooled months 0-5",
+      "binning": "categorical"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "intended_balcon_amount",
+      "psi": 0.03933210494367971,
+      "bins_including_missing": 11,
+      "reference": "pooled months 0-5",
+      "binning": "continuous"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "employment_status",
+      "psi": 0.020352830303071404,
+      "bins_including_missing": 9,
+      "reference": "pooled months 0-5",
+      "binning": "categorical"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "device_os",
+      "psi": 0.0024595265766512507,
+      "bins_including_missing": 7,
+      "reference": "pooled months 0-5",
+      "binning": "categorical"
+    },
+    {
+      "month": 7,
+      "split": "test",
+      "feature": "source",
+      "psi": 0.002059443496363285,
+      "bins_including_missing": 4,
+      "reference": "pooled months 0-5",
+      "binning": "categorical"
+    }
+  ],
+  "parquet_cache_path": null,
+  "parquet_cache_bytes": null,
+  "parquet_cache_verified": null,
+  "parquet_cache_values": "Original source values; documented sentinels are preserved.",
+  "psi_method": {
+    "version": 2,
+    "numeric_discrete_max_values": 20,
+    "bin_fitting": "reference training rows only",
+    "pseudocount": 0.5,
+    "discrete": "one bin per training value plus reserved unseen and missing bins",
+    "continuous": "training deciles with infinite outer edges plus missing bin"
+  },
+  "notes": [
+    "All 1,000,000 Base rows are included; no sampling is used for tables or figures.",
+    "The source CSV is never modified. Documented missing values are masked only in descriptive calculations.",
+    "Official datasheet Q7 explicitly defines all negative intended_balcon_amount values as missing.",
+    "The datasheet's device_distinct_emails corresponds to CSV field device_distinct_emails_8w.",
+    "Valid negative velocity_6h and credit_risk_score values are retained.",
+    "month is a split variable and must be excluded from model features; it may still proxy population changes in other features.",
+    "Age is rounded to decades; age >= 50 is the observed bin-based group definition, not exact chronological age.",
+    "Month 6 is validation and month 7 is the final test month. EDA does not inspect model test predictions.",
+    "All-data label summaries are descriptive only and must not guide model or threshold selection.",
+    "PSI bins are defined by training data only: categories and numeric fields with <=20 distinct training values use value bins plus unseen/missing bins; continuous fields use deciles plus a missing bin; every bin has a 0.5 pseudocount. PSI is descriptive, not a formal significance test.",
+    "No model imputation, scaling, encoding, or feature selection is fitted by this module."
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "matplotlib": "3.10.7"
+  },
+  "tables": [
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_schema.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_numeric_summary.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_category_summary.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_monthly.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_split_summary.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_age_group.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_monthly_age_group.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_monthly_feature_summary.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_monthly_psi.csv",
+    "D:\\bank_fraud_analysis\\outputs\\tables\\eda_monthly_missing.csv"
+  ],
+  "figures": [
+    "D:\\bank_fraud_analysis\\outputs\\figures\\eda_age_group_monthly.png",
+    "D:\\bank_fraud_analysis\\outputs\\figures\\eda_missing_values.png",
+    "D:\\bank_fraud_analysis\\outputs\\figures\\eda_monthly_feature_distributions.png",
+    "D:\\bank_fraud_analysis\\outputs\\figures\\eda_monthly_psi.png",
+    "D:\\bank_fraud_analysis\\outputs\\figures\\eda_monthly_volume_fraud.png"
+  ]
+}

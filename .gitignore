@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/*.csv
+data/raw/*.download
+data/processed/*.parquet
+outputs/models/*.joblib
+outputs/predictions/
+
+# ---- not for the public repository ----
+# dataset is CC BY-NC-ND 4.0: download it with scripts/download_data.py, don't redistribute
+data/processed/
+# large / regenerable model artefacts and predictions
+outputs/predictions/
+outputs/extension_models/
+outputs/*.log
+# local backups
+tmp_backup_*/
+outputs/revision_backup_*/
+outputs/revision_visual_*/
+# third-party paper, datasheet and code: link to the originals instead
+references/*.pdf
+references/paper.txt
+references/datasheet.txt
+references/empirical_results.ipynb
+references/official_README.md
+references/official_LICENSE
+*.joblib
+*.parquet
+outputs/rolling/models/
+outputs/rolling/predictions/

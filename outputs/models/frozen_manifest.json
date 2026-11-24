@@ -1,0 +1,209 @@
+{
+  "seed": 42,
+  "raw_sha256": "7bf10a37ce07e72e14c1b09e5efee3d27261baff4facc7da767b0474dcf9b809",
+  "split": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "validation": [
+      6
+    ],
+    "test": [
+      7
+    ]
+  },
+  "selection": "maximize validation recall under FPR<=0.05; AP breaks ties",
+  "pr_auc_definition": "average_precision_score (AP); trapezoidal PR AUC is saved separately",
+  "supervised_winner": "lightgbm",
+  "review_budget_rate": 0.05641224761482139,
+  "test_labels_used_for_selection": false,
+  "models": {
+    "logistic_regression": {
+      "candidate": "LR_C0.1",
+      "params": {
+        "C": 0.1,
+        "class_weight": "balanced",
+        "max_iter": 500,
+        "n_iter": 156
+      },
+      "threshold": 0.7880952826484279,
+      "validation": {
+        "n": 108168,
+        "fraud": 1450,
+        "tp": 734,
+        "fp": 5335,
+        "fn": 716,
+        "tn": 101383,
+        "recall": 0.5062068965517241,
+        "fpr": 0.04999156655859368,
+        "precision": 0.12094249464491678,
+        "alerts": 6069,
+        "alert_rate": 0.05610716662968716,
+        "threshold": 0.7880952826484279,
+        "pr_auc_ap": 0.1554427347562946,
+        "pr_auc_trapezoid": 0.15474140909715228,
+        "roc_auc": 0.8822072093322327
+      }
+    },
+    "lightgbm": {
+      "candidate": "LGBM_leaves31",
+      "params": {
+        "num_leaves": 31,
+        "reg_lambda": 10.0,
+        "best_iteration": 263,
+        "scale_pos_weight": 96.53269537480064
+      },
+      "threshold": 0.8145777187120082,
+      "validation": {
+        "n": 108168,
+        "fraud": 1450,
+        "tp": 767,
+        "fp": 5335,
+        "fn": 683,
+        "tn": 101383,
+        "recall": 0.5289655172413793,
+        "fpr": 0.04999156655859368,
+        "precision": 0.12569649295313012,
+        "alerts": 6102,
+        "alert_rate": 0.05641224761482139,
+        "threshold": 0.8145777187120082,
+        "pr_auc_ap": 0.17690347432671938,
+        "pr_auc_trapezoid": 0.17642056453855498,
+        "roc_auc": 0.8910901693215313
+      }
+    },
+    "mlp": {
+      "candidate": "MLP_lr0.0004",
+      "params": {
+        "hidden_layer_sizes": [
+          64,
+          32
+        ],
+        "learning_rate_init": 0.0004,
+        "best_epoch": 21,
+        "class_weight": "balanced via sample_weight",
+        "alpha": 0.01
+      },
+      "threshold": 0.8230835795402528,
+      "validation": {
+        "n": 108168,
+        "fraud": 1450,
+        "tp": 732,
+        "fp": 5335,
+        "fn": 718,
+        "tn": 101383,
+        "recall": 0.5048275862068966,
+        "fpr": 0.04999156655859368,
+        "precision": 0.1206527113894841,
+        "alerts": 6067,
+        "alert_rate": 0.056088676873012354,
+        "threshold": 0.8230835795402528,
+        "pr_auc_ap": 0.15844332773944336,
+        "pr_auc_trapezoid": 0.1578128613702982,
+        "roc_auc": 0.8851790829973419
+      }
+    },
+    "isolation_forest": {
+      "candidate": "IF_250_4096",
+      "params": {
+        "n_estimators": 250,
+        "max_samples": 4096,
+        "labels_used_for_fit": false,
+        "labels_used_for_threshold": true
+      },
+      "threshold": 0.48747564049011527,
+      "validation": {
+        "n": 108168,
+        "fraud": 1450,
+        "tp": 104,
+        "fp": 5335,
+        "fn": 1346,
+        "tn": 101383,
+        "recall": 0.07172413793103448,
+        "fpr": 0.04999156655859368,
+        "precision": 0.019121161978304834,
+        "alerts": 5439,
+        "alert_rate": 0.05028289327712447,
+        "threshold": 0.48747564049011527,
+        "pr_auc_ap": 0.015905478044534606,
+        "pr_auc_trapezoid": 0.0158473442026438,
+        "roc_auc": 0.5604143889373928
+      }
+    },
+    "distilled_tree": {
+      "candidate": "Distilled_depth3",
+      "params": {
+        "max_depth": 3,
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 0.005
+      },
+      "threshold": 1.0011696801811174,
+      "validation": {
+        "n": 108168,
+        "fraud": 1450,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1450,
+        "tn": 106718,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "precision": 0.0,
+        "alerts": 0,
+        "alert_rate": 0.0,
+        "threshold": 1.0011696801811174,
+        "pr_auc_ap": 0.04734492902805959,
+        "pr_auc_trapezoid": 0.2116348498513163,
+        "roc_auc": 0.7847801844500264
+      },
+      "fidelity_candidates": [
+        {
+          "depth": 3,
+          "leaves": 5,
+          "validation_same_budget": {
+            "n": 108168,
+            "fraud": 1450,
+            "tp": 479,
+            "fp": 5623,
+            "fn": 971,
+            "tn": 101095,
+            "recall": 0.3303448275862069,
+            "fpr": 0.0526902678086171,
+            "precision": 0.07849885283513602,
+            "alerts": 6102,
+            "alert_rate": 0.05641224761482139
+          },
+          "spearman": 0.6011543770497564,
+          "r2": 0.3799757935251633
+        },
+        {
+          "depth": 4,
+          "leaves": 5,
+          "validation_same_budget": {
+            "n": 108168,
+            "fraud": 1450,
+            "tp": 272,
+            "fp": 5830,
+            "fn": 1178,
+            "tn": 100888,
+            "recall": 0.18758620689655173,
+            "fpr": 0.05462995933207144,
+            "precision": 0.044575549000327765,
+            "alerts": 6102,
+            "alert_rate": 0.05641224761482139
+          },
+          "spearman": 0.6293415422817469,
+          "r2": 0.3982183214066587
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0"
+  }
+}

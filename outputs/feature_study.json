@@ -1,0 +1,1188 @@
+{
+  "parts": {
+    "iv": {
+      "n_fields": 29,
+      "iv_min": 0.02,
+      "psi_max": 0.25,
+      "n_bins": 10,
+      "table": [
+        {
+          "field": "housing_status",
+          "iv": 0.8048128504646408,
+          "level": "很强（应核查）",
+          "psi_train_vs_month6": 0.036424036689132126,
+          "n_bins": 7,
+          "riskiest_bin": "BA",
+          "riskiest_bin_fraud_rate": 0.035222500481602775,
+          "riskiest_bin_woe": 1.2593498864167407,
+          "keep_by_rule": true
+        },
+        {
+          "field": "device_os",
+          "iv": 0.5392486628907566,
+          "level": "很强（应核查）",
+          "psi_train_vs_month6": 0.027516274368641604,
+          "n_bins": 5,
+          "riskiest_bin": "windows",
+          "riskiest_bin_fraud_rate": 0.02303628038041564,
+          "riskiest_bin_woe": 0.8222986686815099,
+          "keep_by_rule": true
+        },
+        {
+          "field": "current_address_months_count",
+          "iv": 0.3817567773117804,
+          "level": "强",
+          "psi_train_vs_month6": 0.020814568057606814,
+          "n_bins": 11,
+          "riskiest_bin": "(110, 159]",
+          "riskiest_bin_fraud_rate": 0.018143481225221584,
+          "riskiest_bin_woe": 0.578421822417642,
+          "keep_by_rule": true
+        },
+        {
+          "field": "proposed_credit_limit",
+          "iv": 0.3806424060296519,
+          "level": "强",
+          "psi_train_vs_month6": 0.08599202473314513,
+          "n_bins": 12,
+          "riskiest_bin": "1900",
+          "riskiest_bin_fraud_rate": 0.15865384615384615,
+          "riskiest_bin_woe": 2.9130599492829057,
+          "keep_by_rule": true
+        },
+        {
+          "field": "credit_risk_score",
+          "iv": 0.37991842983775775,
+          "level": "强",
+          "psi_train_vs_month6": 0.20350345659051947,
+          "n_bins": 10,
+          "riskiest_bin": "(224, inf]",
+          "riskiest_bin_fraud_rate": 0.031126605688009196,
+          "riskiest_bin_woe": 1.131398132503369,
+          "keep_by_rule": true
+        },
+        {
+          "field": "customer_age",
+          "iv": 0.3518873032090126,
+          "level": "强",
+          "psi_train_vs_month6": 0.009645069901661264,
+          "n_bins": 9,
+          "riskiest_bin": "90",
+          "riskiest_bin_fraud_rate": 0.06666666666666667,
+          "riskiest_bin_woe": 2.039172313676438,
+          "keep_by_rule": true
+        },
+        {
+          "field": "prev_address_months_count",
+          "iv": 0.34898901641589986,
+          "level": "强",
+          "psi_train_vs_month6": 0.03722952918096452,
+          "n_bins": 11,
+          "riskiest_bin": "缺失",
+          "riskiest_bin_fraud_rate": 0.013224306546357202,
+          "riskiest_bin_woe": 0.2568936277468013,
+          "keep_by_rule": true
+        },
+        {
+          "field": "date_of_birth_distinct_emails_4w",
+          "iv": 0.24806123790819987,
+          "level": "中",
+          "psi_train_vs_month6": 0.27632859224295697,
+          "n_bins": 10,
+          "riskiest_bin": "(-inf, 4]",
+          "riskiest_bin_fraud_rate": 0.027820055025463912,
+          "riskiest_bin_woe": 1.0157465908676717,
+          "keep_by_rule": false
+        },
+        {
+          "field": "income",
+          "iv": 0.23860947472542887,
+          "level": "中",
+          "psi_train_vs_month6": 0.07933182846754919,
+          "n_bins": 9,
+          "riskiest_bin": "0.9",
+          "riskiest_bin_fraud_rate": 0.02037582767166866,
+          "riskiest_bin_woe": 0.6966639625906651,
+          "keep_by_rule": true
+        },
+        {
+          "field": "keep_alive_session",
+          "iv": 0.23039310924948606,
+          "level": "中",
+          "psi_train_vs_month6": 1.4083101202347953e-05,
+          "n_bins": 2,
+          "riskiest_bin": "0",
+          "riskiest_bin_fraud_rate": 0.01582445682792764,
+          "riskiest_bin_woe": 0.4396034689670675,
+          "keep_by_rule": true
+        },
+        {
+          "field": "employment_status",
+          "iv": 0.18606652527162565,
+          "level": "中",
+          "psi_train_vs_month6": 0.020835795614600913,
+          "n_bins": 7,
+          "riskiest_bin": "CC",
+          "riskiest_bin_fraud_rate": 0.02336224277530643,
+          "riskiest_bin_woe": 0.837130570953291,
+          "keep_by_rule": true
+        },
+        {
+          "field": "name_email_similarity",
+          "iv": 0.1727981305361525,
+          "level": "中",
+          "psi_train_vs_month6": 0.09180283363823012,
+          "n_bins": 10,
+          "riskiest_bin": "(-inf, 0.1051]",
+          "riskiest_bin_fraud_rate": 0.01901910715858061,
+          "riskiest_bin_woe": 0.6264902375492374,
+          "keep_by_rule": true
+        },
+        {
+          "field": "payment_type",
+          "iv": 0.15742131231313938,
+          "level": "中",
+          "psi_train_vs_month6": 0.019492318520067144,
+          "n_bins": 5,
+          "riskiest_bin": "AC",
+          "riskiest_bin_fraud_rate": 0.015782132048202478,
+          "riskiest_bin_woe": 0.43676638014656166,
+          "keep_by_rule": true
+        },
+        {
+          "field": "has_other_cards",
+          "iv": 0.15036393265744138,
+          "level": "中",
+          "psi_train_vs_month6": 0.0014306059056666454,
+          "n_bins": 2,
+          "riskiest_bin": "0",
+          "riskiest_bin_fraud_rate": 0.01204594614753487,
+          "riskiest_bin_woe": 0.16291882973225505,
+          "keep_by_rule": true
+        },
+        {
+          "field": "bank_months_count",
+          "iv": 0.1478905691637975,
+          "level": "中",
+          "psi_train_vs_month6": 0.008810705555429859,
+          "n_bins": 9,
+          "riskiest_bin": "(30, inf]",
+          "riskiest_bin_fraud_rate": 0.015605329743608919,
+          "riskiest_bin_woe": 0.4253141072551094,
+          "keep_by_rule": true
+        },
+        {
+          "field": "intended_balcon_amount",
+          "iv": 0.14464294637087438,
+          "level": "中",
+          "psi_train_vs_month6": 0.0071827918503569975,
+          "n_bins": 11,
+          "riskiest_bin": "缺失",
+          "riskiest_bin_fraud_rate": 0.0122203485871502,
+          "riskiest_bin_woe": 0.17692601416404338,
+          "keep_by_rule": true
+        },
+        {
+          "field": "device_distinct_emails_8w",
+          "iv": 0.12537969529273776,
+          "level": "中",
+          "psi_train_vs_month6": 0.00978906334505685,
+          "n_bins": 4,
+          "riskiest_bin": "2",
+          "riskiest_bin_fraud_rate": 0.03879024044635345,
+          "riskiest_bin_woe": 1.3601625688092436,
+          "keep_by_rule": true
+        },
+        {
+          "field": "bank_branch_count_8w",
+          "iv": 0.12123723536750738,
+          "level": "中",
+          "psi_train_vs_month6": 0.015594028758338395,
+          "n_bins": 9,
+          "riskiest_bin": "(0, 1]",
+          "riskiest_bin_fraud_rate": 0.016761831365817773,
+          "riskiest_bin_woe": 0.4978452813750324,
+          "keep_by_rule": true
+        },
+        {
+          "field": "phone_home_valid",
+          "iv": 0.11099647909183835,
+          "level": "中",
+          "psi_train_vs_month6": 0.0074296609412872975,
+          "n_bins": 2,
+          "riskiest_bin": "0",
+          "riskiest_bin_fraud_rate": 0.012902939460802962,
+          "riskiest_bin_woe": 0.23252796044430527,
+          "keep_by_rule": true
+        },
+        {
+          "field": "email_is_free",
+          "iv": 0.07120938823580848,
+          "level": "弱",
+          "psi_train_vs_month6": 0.020474856077416705,
+          "n_bins": 2,
+          "riskiest_bin": "1",
+          "riskiest_bin_fraud_rate": 0.012686755964469656,
+          "riskiest_bin_woe": 0.21542190515728443,
+          "keep_by_rule": true
+        },
+        {
+          "field": "days_since_request",
+          "iv": 0.04940209528067091,
+          "level": "弱",
+          "psi_train_vs_month6": 0.014703629269614164,
+          "n_bins": 10,
+          "riskiest_bin": "(-inf, 0.002862]",
+          "riskiest_bin_fraud_rate": 0.012880665165599567,
+          "riskiest_bin_woe": 0.23069309859650258,
+          "keep_by_rule": true
+        },
+        {
+          "field": "velocity_24h",
+          "iv": 0.029385198465391463,
+          "level": "弱",
+          "psi_train_vs_month6": 1.280394133504301,
+          "n_bins": 10,
+          "riskiest_bin": "(4722, 5020]",
+          "riskiest_bin_fraud_rate": 0.01318272157790133,
+          "riskiest_bin_woe": 0.254167602778092,
+          "keep_by_rule": false
+        },
+        {
+          "field": "velocity_4w",
+          "iv": 0.028887074370404348,
+          "level": "弱",
+          "psi_train_vs_month6": 2.68553705611356,
+          "n_bins": 10,
+          "riskiest_bin": "(-inf, 4246]",
+          "riskiest_bin_fraud_rate": 0.013698285513025321,
+          "riskiest_bin_woe": 0.2930359125056598,
+          "keep_by_rule": false
+        },
+        {
+          "field": "velocity_6h",
+          "iv": 0.024349330174043202,
+          "level": "弱",
+          "psi_train_vs_month6": 0.7421450010635277,
+          "n_bins": 10,
+          "riskiest_bin": "(-inf, 2175]",
+          "riskiest_bin_fraud_rate": 0.013396394923206581,
+          "riskiest_bin_woe": 0.2704551750371023,
+          "keep_by_rule": false
+        },
+        {
+          "field": "phone_mobile_valid",
+          "iv": 0.019194630580261825,
+          "level": "无预测力",
+          "psi_train_vs_month6": 0.009149654954802723,
+          "n_bins": 2,
+          "riskiest_bin": "0",
+          "riskiest_bin_fraud_rate": 0.014454823202181364,
+          "riskiest_bin_woe": 0.34796669523165896,
+          "keep_by_rule": false
+        },
+        {
+          "field": "foreign_request",
+          "iv": 0.01775511136418559,
+          "level": "无预测力",
+          "psi_train_vs_month6": 0.0003779317480445714,
+          "n_bins": 2,
+          "riskiest_bin": "1",
+          "riskiest_bin_fraud_rate": 0.02003581280549775,
+          "riskiest_bin_woe": 0.6809479509394124,
+          "keep_by_rule": false
+        },
+        {
+          "field": "session_length_in_minutes",
+          "iv": 0.015571209831263604,
+          "level": "无预测力",
+          "psi_train_vs_month6": 0.015449149988670495,
+          "n_bins": 11,
+          "riskiest_bin": "(15.99, inf]",
+          "riskiest_bin_fraud_rate": 0.012438876846297324,
+          "riskiest_bin_woe": 0.19530269931226346,
+          "keep_by_rule": false
+        },
+        {
+          "field": "zip_count_4w",
+          "iv": 0.010518584252455334,
+          "level": "无预测力",
+          "psi_train_vs_month6": 0.23055192734566235,
+          "n_bins": 10,
+          "riskiest_bin": "(1877, 2450]",
+          "riskiest_bin_fraud_rate": 0.012372195844951892,
+          "riskiest_bin_woe": 0.18992178458680928,
+          "keep_by_rule": false
+        },
+        {
+          "field": "source",
+          "iv": 0.0008590766006903076,
+          "level": "无预测力",
+          "psi_train_vs_month6": 0.0002501588802965329,
+          "n_bins": 2,
+          "riskiest_bin": "TELEAPP",
+          "riskiest_bin_fraud_rate": 0.013944570332926617,
+          "riskiest_bin_woe": 0.31728016415271176,
+          "keep_by_rule": false
+        }
+      ],
+      "dropped_by_rule": [
+        "date_of_birth_distinct_emails_4w",
+        "velocity_24h",
+        "velocity_4w",
+        "velocity_6h",
+        "phone_mobile_valid",
+        "foreign_request",
+        "session_length_in_minutes",
+        "zip_count_4w",
+        "source"
+      ],
+      "level_counts": {
+        "中": 12,
+        "弱": 5,
+        "强": 5,
+        "无预测力": 5,
+        "很强（应核查）": 2
+      },
+      "seconds": 18.4
+    },
+    "selection": {
+      "dropped_fields": [
+        "date_of_birth_distinct_emails_4w",
+        "velocity_24h",
+        "velocity_4w",
+        "velocity_6h",
+        "phone_mobile_valid",
+        "foreign_request",
+        "session_length_in_minutes",
+        "zip_count_4w",
+        "source"
+      ],
+      "dropped_columns": [
+        "zip_count_4w",
+        "velocity_6h",
+        "velocity_24h",
+        "velocity_4w",
+        "date_of_birth_distinct_emails_4w",
+        "phone_mobile_valid",
+        "foreign_request",
+        "source",
+        "session_length_in_minutes",
+        "session_length_in_minutes__missing"
+      ],
+      "reference_reproduces_frozen_max_abs": 0.0,
+      "rows": [
+        {
+          "label": "LightGBM（冻结参考）",
+          "threshold": 0.8145777187120082,
+          "val_ap": 0.17690347432671938,
+          "val_recall": 0.5289655172413793,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.21044683362965014,
+          "test_roc_auc": 0.8928084245279101,
+          "test_recall": 0.5329131652661064,
+          "test_fpr": 0.04375622281611906,
+          "test_precision": 0.15417341977309562,
+          "test_alert_rate": 0.05096909430728086,
+          "test_mean_score": 0.2412352503570109,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.8220108835950972,
+          "test_recall_at_0_5": 0.8011204481792717,
+          "test_fpr_at_0_5": 0.177676465964471,
+          "test_same_budget_recall": 0.5490196078431373,
+          "kind": "frozen"
+        },
+        {
+          "label": "同配置重训（全部字段）",
+          "threshold": 0.8145777187120082,
+          "val_ap": 0.17690347432671938,
+          "val_recall": 0.5289655172413793,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.21044683362965014,
+          "test_roc_auc": 0.8928084245279101,
+          "test_recall": 0.5329131652661064,
+          "test_fpr": 0.04375622281611906,
+          "test_precision": 0.15417341977309562,
+          "test_alert_rate": 0.05096909430728086,
+          "test_mean_score": 0.2412352503570109,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.8220108835950972,
+          "test_recall_at_0_5": 0.8011204481792717,
+          "test_fpr_at_0_5": 0.177676465964471,
+          "test_same_budget_recall": 0.5490196078431373,
+          "kind": "reference_refit",
+          "n_features": 35,
+          "best_iteration": 263,
+          "fit_seconds": 25.18433860001096
+        },
+        {
+          "label": "按规则删去 9 个字段",
+          "threshold": 0.812087468886927,
+          "val_ap": 0.17364004014036674,
+          "val_recall": 0.5151724137931034,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.2037512401560377,
+          "test_roc_auc": 0.888734939555658,
+          "test_recall": 0.5070028011204482,
+          "test_fpr": 0.039060944295970235,
+          "test_precision": 0.16266007638732868,
+          "test_alert_rate": 0.04596098840391149,
+          "test_mean_score": 0.22446055053754582,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.8394308313455799,
+          "test_recall_at_0_5": 0.7703081232492998,
+          "test_fpr_at_0_5": 0.15953466436094954,
+          "test_same_budget_recall": 0.5462184873949579,
+          "kind": "rule_selected",
+          "n_features": 25,
+          "best_iteration": 337,
+          "fit_seconds": 24.781641800000216
+        }
+      ],
+      "seconds": 51.7
+    },
+    "derived": {
+      "groups": {
+        "ratios": [
+          "v_ratio_6h_24h",
+          "v_ratio_24h_4w"
+        ],
+        "consistency": [
+          "missing_count",
+          "valid_phones",
+          "free_email_low_similarity",
+          "limit_per_income",
+          "bank_months_per_age",
+          "address_months_total",
+          "dob_emails_per_device_email"
+        ],
+        "encodings": [
+          "freq_payment_type",
+          "freq_employment_status",
+          "freq_housing_status",
+          "freq_source",
+          "freq_device_os",
+          "te_payment_type",
+          "te_employment_status",
+          "te_housing_status",
+          "te_source",
+          "te_device_os"
+        ]
+      },
+      "group_labels": {
+        "ratios": "速度比率",
+        "consistency": "身份与一致性",
+        "encodings": "类别频率与目标编码"
+      },
+      "rows": [
+        {
+          "label": "同配置重训（无衍生特征）",
+          "threshold": 0.8145777187120082,
+          "val_ap": 0.17690347432671938,
+          "val_recall": 0.5289655172413793,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.21044683362965014,
+          "test_roc_auc": 0.8928084245279101,
+          "test_recall": 0.5329131652661064,
+          "test_fpr": 0.04375622281611906,
+          "test_precision": 0.15417341977309562,
+          "test_alert_rate": 0.05096909430728086,
+          "test_mean_score": 0.2412352503570109,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.8220108835950972,
+          "test_recall_at_0_5": 0.8011204481792717,
+          "test_fpr_at_0_5": 0.177676465964471,
+          "test_same_budget_recall": 0.5490196078431373,
+          "variant": "reference",
+          "n_features": 35,
+          "n_new": 0,
+          "best_iteration": 263,
+          "fit_seconds": 23.997443799991743,
+          "chosen_on_month6": true
+        },
+        {
+          "label": "加入「速度比率」",
+          "threshold": 0.8190653565993116,
+          "val_ap": 0.17421347213965957,
+          "val_recall": 0.5124137931034483,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.20564168121193127,
+          "test_roc_auc": 0.8906283196609356,
+          "test_recall": 0.5273109243697479,
+          "test_fpr": 0.04250903945920453,
+          "test_precision": 0.15658140985651903,
+          "test_alert_rate": 0.049657693380006813,
+          "test_mean_score": 0.24181450537096183,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.8233016325392646,
+          "test_recall_at_0_5": 0.7927170868347339,
+          "test_fpr_at_0_5": 0.17624063302415763,
+          "test_same_budget_recall": 0.5469187675070029,
+          "variant": "ratios",
+          "n_features": 37,
+          "n_new": 2,
+          "best_iteration": 267,
+          "fit_seconds": 27.795749500000966,
+          "chosen_on_month6": false,
+          "vs_reference_ap_diff": -0.0048051524177188665,
+          "vs_reference_ap_diff_ci95": [
+            -0.012258308704651735,
+            0.0019412489739995872
+          ],
+          "vs_reference_same_budget_recall_diff": -0.0021008403361344463,
+          "vs_reference_same_budget_recall_diff_ci95": [
+            -0.015476190476190529,
+            0.011957282913165236
+          ]
+        },
+        {
+          "label": "加入「身份与一致性」",
+          "threshold": 0.8183110308945665,
+          "val_ap": 0.1800853993514891,
+          "val_recall": 0.5220689655172414,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.21320145623748654,
+          "test_roc_auc": 0.8900593250977484,
+          "test_recall": 0.5133053221288515,
+          "test_fpr": 0.04121993397264581,
+          "test_precision": 0.15709387055293614,
+          "test_alert_rate": 0.04818107658787935,
+          "test_mean_score": 0.22776004862222368,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.832151007300476,
+          "test_recall_at_0_5": 0.7822128851540616,
+          "test_fpr_at_0_5": 0.16710160876172508,
+          "test_same_budget_recall": 0.5518207282913166,
+          "variant": "consistency",
+          "n_features": 42,
+          "n_new": 7,
+          "best_iteration": 309,
+          "fit_seconds": 32.7682261000009,
+          "chosen_on_month6": false,
+          "vs_reference_ap_diff": 0.0027546226078364044,
+          "vs_reference_ap_diff_ci95": [
+            -0.002941308832427384,
+            0.008510213052019187
+          ],
+          "vs_reference_same_budget_recall_diff": 0.0028011204481792618,
+          "vs_reference_same_budget_recall_diff_ci95": [
+            -0.0091036414565826,
+            0.014740896358543481
+          ]
+        },
+        {
+          "label": "加入「类别频率与目标编码」",
+          "threshold": 0.815097083946115,
+          "val_ap": 0.18082574654563763,
+          "val_recall": 0.5241379310344828,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.21074205987680264,
+          "test_roc_auc": 0.8937110126763068,
+          "test_recall": 0.5196078431372549,
+          "test_fpr": 0.04002515327778651,
+          "test_precision": 0.16268362201271652,
+          "test_alert_rate": 0.04709684747477877,
+          "test_mean_score": 0.21681762167497629,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.8429623204568218,
+          "test_recall_at_0_5": 0.780812324929972,
+          "test_fpr_at_0_5": 0.15610753026253735,
+          "test_same_budget_recall": 0.5581232492997199,
+          "variant": "encodings",
+          "n_features": 45,
+          "n_new": 10,
+          "best_iteration": 426,
+          "fit_seconds": 51.54344600001059,
+          "chosen_on_month6": false,
+          "vs_reference_ap_diff": 0.00029522624715250245,
+          "vs_reference_ap_diff_ci95": [
+            -0.005884641748581259,
+            0.007852747016806185
+          ],
+          "vs_reference_same_budget_recall_diff": 0.0091036414565826,
+          "vs_reference_same_budget_recall_diff_ci95": [
+            -0.003501400560224077,
+            0.022408963585434098
+          ]
+        },
+        {
+          "label": "加入全部三组",
+          "threshold": 0.8143551989045865,
+          "val_ap": 0.17805363414606526,
+          "val_recall": 0.5151724137931034,
+          "val_fpr": 0.04999156655859368,
+          "test_ap": 0.213472317051773,
+          "test_roc_auc": 0.8897466045056601,
+          "test_recall": 0.5070028011204482,
+          "test_fpr": 0.03994130901849814,
+          "test_precision": 0.15964718853362733,
+          "test_alert_rate": 0.046828371694391954,
+          "test_mean_score": 0.2170257470720429,
+          "test_base_rate": 0.014745515938167962,
+          "test_accuracy_at_0_5": 0.8420433072085747,
+          "test_recall_at_0_5": 0.7661064425770309,
+          "test_fpr_at_0_5": 0.1568202064664885,
+          "test_same_budget_recall": 0.5511204481792717,
+          "variant": "all",
+          "n_features": 54,
+          "n_new": 19,
+          "best_iteration": 385,
+          "fit_seconds": 53.32529400000931,
+          "chosen_on_month6": false,
+          "vs_reference_ap_diff": 0.00302548342212286,
+          "vs_reference_ap_diff_ci95": [
+            -0.003786945769558483,
+            0.010311793052608043
+          ],
+          "vs_reference_same_budget_recall_diff": 0.0021008403361344463,
+          "vs_reference_same_budget_recall_diff_ci95": [
+            -0.011922268907563094,
+            0.015423669467787175
+          ]
+        }
+      ],
+      "chosen_on_month6": "reference",
+      "new_feature_gain_share": {
+        "te_housing_status": 0.32164557539301913,
+        "freq_device_os": 0.11053895176227174,
+        "te_device_os": 0.037755039244711824,
+        "missing_count": 0.030584060771897327,
+        "free_email_low_similarity": 0.026194715028248678,
+        "te_employment_status": 0.01135286734644897,
+        "address_months_total": 0.010260058336615804,
+        "dob_emails_per_device_email": 0.010190518169818865,
+        "valid_phones": 0.009129061323489082,
+        "v_ratio_6h_24h": 0.007655218932335435,
+        "bank_months_per_age": 0.006783203330798986,
+        "v_ratio_24h_4w": 0.006233201493604145,
+        "limit_per_income": 0.0037817522855698622,
+        "te_payment_type": 0.0032458277168526508,
+        "freq_housing_status": 0.001736396715271863,
+        "te_source": 0.0009700112173577528,
+        "freq_payment_type": 0.0006658987423366551,
+        "freq_employment_status": 0.000495018787107042,
+        "freq_source": 0.0
+      },
+      "rolling": [
+        {
+          "window": "window_5",
+          "train_months": [
+            0,
+            1,
+            2
+          ],
+          "validation_month": 3,
+          "test_month": 4,
+          "k": 6384,
+          "reference_test_ap": 0.17242264948402508,
+          "reference_test_recall": 0.5674931129476584,
+          "reference_test_fpr": 0.05188570885384073,
+          "reference_same_budget_recall": 0.5330578512396694,
+          "reference_best_iteration": 235,
+          "all_test_ap": 0.175152728390302,
+          "all_test_recall": 0.5612947658402204,
+          "all_test_fpr": 0.050847994676763916,
+          "all_same_budget_recall": 0.528236914600551,
+          "all_best_iteration": 248,
+          "ap_diff": 0.0027300789062769115,
+          "ap_diff_ci95": [
+            -0.0038373569597495278,
+            0.008646046223914561
+          ],
+          "same_budget_recall_diff": -0.004820936639118423,
+          "same_budget_recall_diff_ci95": [
+            -0.016563360881542647,
+            0.01172520661157034
+          ]
+        },
+        {
+          "window": "window_6",
+          "train_months": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "validation_month": 4,
+          "test_month": 5,
+          "k": 5966,
+          "reference_test_ap": 0.1909002263716118,
+          "reference_test_recall": 0.4528703047484054,
+          "reference_test_fpr": 0.032312232851618154,
+          "reference_same_budget_recall": 0.5166548547129696,
+          "reference_best_iteration": 352,
+          "all_test_ap": 0.18668173844570943,
+          "all_test_recall": 0.4585400425230333,
+          "all_test_fpr": 0.030794151570662866,
+          "all_same_budget_recall": 0.5124025513819985,
+          "all_best_iteration": 297,
+          "ap_diff": -0.0042184879259023755,
+          "ap_diff_ci95": [
+            -0.010202897459866979,
+            0.0024339169033824482
+          ],
+          "same_budget_recall_diff": -0.004252303330971041,
+          "same_budget_recall_diff_ci95": [
+            -0.017026931254429487,
+            0.012048192771084265
+          ]
+        },
+        {
+          "window": "window_7",
+          "train_months": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "validation_month": 5,
+          "test_month": 6,
+          "k": 5408,
+          "reference_test_ap": 0.1759206119933219,
+          "reference_test_recall": 0.5586206896551724,
+          "reference_test_fpr": 0.06057085027830356,
+          "reference_same_budget_recall": 0.503448275862069,
+          "reference_best_iteration": 320,
+          "all_test_ap": 0.17510721933925716,
+          "all_test_recall": 0.5579310344827586,
+          "all_test_fpr": 0.05968065368541389,
+          "all_same_budget_recall": 0.48758620689655174,
+          "all_best_iteration": 308,
+          "ap_diff": -0.0008133926540647429,
+          "ap_diff_ci95": [
+            -0.00657676787761522,
+            0.005508473981057528
+          ],
+          "same_budget_recall_diff": -0.01586206896551723,
+          "same_budget_recall_diff_ci95": [
+            -0.033137931034482725,
+            -0.002034482758620643
+          ]
+        },
+        {
+          "window": "window_8",
+          "train_months": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "validation_month": 6,
+          "test_month": 7,
+          "k": 4842,
+          "reference_test_ap": 0.21044683362965014,
+          "reference_test_recall": 0.5329131652661064,
+          "reference_test_fpr": 0.04375622281611906,
+          "reference_same_budget_recall": 0.530812324929972,
+          "reference_best_iteration": 263,
+          "all_test_ap": 0.213472317051773,
+          "all_test_recall": 0.5070028011204482,
+          "all_test_fpr": 0.03994130901849814,
+          "all_same_budget_recall": 0.5189075630252101,
+          "all_best_iteration": 385,
+          "ap_diff": 0.00302548342212286,
+          "ap_diff_ci95": [
+            -0.003786945769558483,
+            0.010311793052608043
+          ],
+          "same_budget_recall_diff": -0.011904761904761862,
+          "same_budget_recall_diff_ci95": [
+            -0.023827030812324956,
+            0.0007177871148459398
+          ]
+        }
+      ],
+      "te_smoothing": 100,
+      "te_folds": 5,
+      "bootstrap_reps": 200,
+      "note": "Rolling windows compare the pre-declared \"all groups\" set, fixed LightGBM configuration (num_leaves/reg_lambda of the frozen model), early stopping on each window validation month.",
+      "seconds": 569.7
+    },
+    "importance": {
+      "base_val_ap": 0.17690347432671938,
+      "repeats": 3,
+      "spearman": {
+        "perm_ap_drop_vs_shap_mean_abs": 0.8487684729064038,
+        "perm_ap_drop_vs_iv": 0.6847290640394087,
+        "shap_mean_abs_vs_iv": 0.524630541871921
+      },
+      "top10": {
+        "perm_ap_drop": [
+          "housing_status",
+          "device_os",
+          "phone_home_valid",
+          "has_other_cards",
+          "keep_alive_session",
+          "prev_address_months_count",
+          "name_email_similarity",
+          "income",
+          "proposed_credit_limit",
+          "email_is_free"
+        ],
+        "shap_mean_abs": [
+          "device_os",
+          "phone_home_valid",
+          "housing_status",
+          "name_email_similarity",
+          "prev_address_months_count",
+          "has_other_cards",
+          "current_address_months_count",
+          "keep_alive_session",
+          "email_is_free",
+          "income"
+        ],
+        "iv": [
+          "housing_status",
+          "device_os",
+          "current_address_months_count",
+          "proposed_credit_limit",
+          "credit_risk_score",
+          "customer_age",
+          "prev_address_months_count",
+          "date_of_birth_distinct_emails_4w",
+          "income",
+          "keep_alive_session"
+        ]
+      },
+      "top10_all_three": [
+        "device_os",
+        "housing_status",
+        "income",
+        "keep_alive_session",
+        "prev_address_months_count"
+      ],
+      "table": [
+        {
+          "field": "housing_status",
+          "perm_ap_drop": 0.034615895270994214,
+          "perm_ap_drop_sd": 0.0030455569978333663,
+          "shap_mean_abs": 0.44043911246155437,
+          "iv": 0.8048128504646408,
+          "perm_rank": 1,
+          "shap_rank": 3,
+          "iv_rank": 1
+        },
+        {
+          "field": "device_os",
+          "perm_ap_drop": 0.03445579967319368,
+          "perm_ap_drop_sd": 0.0037727176802747455,
+          "shap_mean_abs": 0.5195414444370564,
+          "iv": 0.5392486628907566,
+          "perm_rank": 2,
+          "shap_rank": 1,
+          "iv_rank": 2
+        },
+        {
+          "field": "phone_home_valid",
+          "perm_ap_drop": 0.027125366817135788,
+          "perm_ap_drop_sd": 0.0021982723907021384,
+          "shap_mean_abs": 0.4543981029876926,
+          "iv": 0.11099647909183835,
+          "perm_rank": 3,
+          "shap_rank": 2,
+          "iv_rank": 19
+        },
+        {
+          "field": "has_other_cards",
+          "perm_ap_drop": 0.024608519543397444,
+          "perm_ap_drop_sd": 0.0007763139103841044,
+          "shap_mean_abs": 0.35346167370238707,
+          "iv": 0.15036393265744138,
+          "perm_rank": 4,
+          "shap_rank": 6,
+          "iv_rank": 14
+        },
+        {
+          "field": "keep_alive_session",
+          "perm_ap_drop": 0.01905913420829768,
+          "perm_ap_drop_sd": 0.00034213054481003406,
+          "shap_mean_abs": 0.32534573128725297,
+          "iv": 0.23039310924948606,
+          "perm_rank": 5,
+          "shap_rank": 8,
+          "iv_rank": 10
+        },
+        {
+          "field": "prev_address_months_count",
+          "perm_ap_drop": 0.01891808865713543,
+          "perm_ap_drop_sd": 0.002768109281843951,
+          "shap_mean_abs": 0.38398497402006104,
+          "iv": 0.34898901641589986,
+          "perm_rank": 6,
+          "shap_rank": 5,
+          "iv_rank": 7
+        },
+        {
+          "field": "name_email_similarity",
+          "perm_ap_drop": 0.018367350982296648,
+          "perm_ap_drop_sd": 0.0010122093806836014,
+          "shap_mean_abs": 0.39708945628920184,
+          "iv": 0.1727981305361525,
+          "perm_rank": 7,
+          "shap_rank": 4,
+          "iv_rank": 12
+        },
+        {
+          "field": "income",
+          "perm_ap_drop": 0.0161843671807812,
+          "perm_ap_drop_sd": 0.000457853639409484,
+          "shap_mean_abs": 0.29398939041732264,
+          "iv": 0.23860947472542887,
+          "perm_rank": 8,
+          "shap_rank": 10,
+          "iv_rank": 9
+        },
+        {
+          "field": "proposed_credit_limit",
+          "perm_ap_drop": 0.012831728464105943,
+          "perm_ap_drop_sd": 0.0010085003675987581,
+          "shap_mean_abs": 0.049531192123900974,
+          "iv": 0.3806424060296519,
+          "perm_rank": 9,
+          "shap_rank": 24,
+          "iv_rank": 4
+        },
+        {
+          "field": "email_is_free",
+          "perm_ap_drop": 0.011879047035871984,
+          "perm_ap_drop_sd": 0.0023232918630367453,
+          "shap_mean_abs": 0.32113649273705946,
+          "iv": 0.07120938823580848,
+          "perm_rank": 10,
+          "shap_rank": 9,
+          "iv_rank": 20
+        },
+        {
+          "field": "intended_balcon_amount",
+          "perm_ap_drop": 0.011821427970964943,
+          "perm_ap_drop_sd": 0.001188598721650394,
+          "shap_mean_abs": 0.22486998739635392,
+          "iv": 0.14464294637087438,
+          "perm_rank": 11,
+          "shap_rank": 12,
+          "iv_rank": 16
+        },
+        {
+          "field": "current_address_months_count",
+          "perm_ap_drop": 0.010325700608085001,
+          "perm_ap_drop_sd": 0.0030231622182567684,
+          "shap_mean_abs": 0.3260527448472607,
+          "iv": 0.3817567773117804,
+          "perm_rank": 12,
+          "shap_rank": 7,
+          "iv_rank": 3
+        },
+        {
+          "field": "date_of_birth_distinct_emails_4w",
+          "perm_ap_drop": 0.009934251068106767,
+          "perm_ap_drop_sd": 0.002425731672890827,
+          "shap_mean_abs": 0.12129980910518509,
+          "iv": 0.24806123790819987,
+          "perm_rank": 13,
+          "shap_rank": 21,
+          "iv_rank": 8
+        },
+        {
+          "field": "customer_age",
+          "perm_ap_drop": 0.009225337608077644,
+          "perm_ap_drop_sd": 0.0007923887031358331,
+          "shap_mean_abs": 0.13721526688393468,
+          "iv": 0.3518873032090126,
+          "perm_rank": 14,
+          "shap_rank": 18,
+          "iv_rank": 6
+        },
+        {
+          "field": "bank_branch_count_8w",
+          "perm_ap_drop": 0.009171344756351804,
+          "perm_ap_drop_sd": 0.00043474546647541564,
+          "shap_mean_abs": 0.19982989084319666,
+          "iv": 0.12123723536750738,
+          "perm_rank": 15,
+          "shap_rank": 14,
+          "iv_rank": 18
+        },
+        {
+          "field": "credit_risk_score",
+          "perm_ap_drop": 0.008753894586779063,
+          "perm_ap_drop_sd": 0.000504875802558935,
+          "shap_mean_abs": 0.16016590523646462,
+          "iv": 0.37991842983775775,
+          "perm_rank": 16,
+          "shap_rank": 16,
+          "iv_rank": 5
+        },
+        {
+          "field": "days_since_request",
+          "perm_ap_drop": 0.007168801146852616,
+          "perm_ap_drop_sd": 0.00012838923233960496,
+          "shap_mean_abs": 0.12977186244211927,
+          "iv": 0.04940209528067091,
+          "perm_rank": 17,
+          "shap_rank": 20,
+          "iv_rank": 21
+        },
+        {
+          "field": "employment_status",
+          "perm_ap_drop": 0.007015140484012805,
+          "perm_ap_drop_sd": 0.0010604532209765227,
+          "shap_mean_abs": 0.23061292335660175,
+          "iv": 0.18606652527162565,
+          "perm_rank": 18,
+          "shap_rank": 11,
+          "iv_rank": 11
+        },
+        {
+          "field": "bank_months_count",
+          "perm_ap_drop": 0.0058358099079719354,
+          "perm_ap_drop_sd": 0.000654085959962299,
+          "shap_mean_abs": 0.18014321692966193,
+          "iv": 0.1478905691637975,
+          "perm_rank": 19,
+          "shap_rank": 15,
+          "iv_rank": 15
+        },
+        {
+          "field": "session_length_in_minutes",
+          "perm_ap_drop": 0.0035288208349757246,
+          "perm_ap_drop_sd": 0.0006394087687526846,
+          "shap_mean_abs": 0.061805869144023994,
+          "iv": 0.015571209831263604,
+          "perm_rank": 20,
+          "shap_rank": 22,
+          "iv_rank": 27
+        },
+        {
+          "field": "device_distinct_emails_8w",
+          "perm_ap_drop": 0.0034827692934592167,
+          "perm_ap_drop_sd": 0.0004675454577335834,
+          "shap_mean_abs": 0.05258022476976171,
+          "iv": 0.12537969529273776,
+          "perm_rank": 21,
+          "shap_rank": 23,
+          "iv_rank": 17
+        },
+        {
+          "field": "zip_count_4w",
+          "perm_ap_drop": 0.002289698005176329,
+          "perm_ap_drop_sd": 0.000334341773428852,
+          "shap_mean_abs": 0.13298297341828996,
+          "iv": 0.010518584252455334,
+          "perm_rank": 22,
+          "shap_rank": 19,
+          "iv_rank": 28
+        },
+        {
+          "field": "velocity_4w",
+          "perm_ap_drop": 0.0021316797317217917,
+          "perm_ap_drop_sd": 0.000998669702639485,
+          "shap_mean_abs": 0.21310710109941175,
+          "iv": 0.028887074370404348,
+          "perm_rank": 23,
+          "shap_rank": 13,
+          "iv_rank": 23
+        },
+        {
+          "field": "velocity_24h",
+          "perm_ap_drop": 0.001696093923563069,
+          "perm_ap_drop_sd": 0.00046532210235019315,
+          "shap_mean_abs": 0.1450696906256942,
+          "iv": 0.029385198465391463,
+          "perm_rank": 24,
+          "shap_rank": 17,
+          "iv_rank": 22
+        },
+        {
+          "field": "foreign_request",
+          "perm_ap_drop": 0.0014734154424022132,
+          "perm_ap_drop_sd": 0.00018885274188020762,
+          "shap_mean_abs": 0.01857855146931683,
+          "iv": 0.01775511136418559,
+          "perm_rank": 25,
+          "shap_rank": 27,
+          "iv_rank": 26
+        },
+        {
+          "field": "phone_mobile_valid",
+          "perm_ap_drop": 0.0010025517166799374,
+          "perm_ap_drop_sd": 0.00028494616439719904,
+          "shap_mean_abs": 0.021206232880936343,
+          "iv": 0.019194630580261825,
+          "perm_rank": 26,
+          "shap_rank": 26,
+          "iv_rank": 25
+        },
+        {
+          "field": "velocity_6h",
+          "perm_ap_drop": 0.0009540568348376891,
+          "perm_ap_drop_sd": 0.00012858641581344857,
+          "shap_mean_abs": 0.03935953919181701,
+          "iv": 0.024349330174043202,
+          "perm_rank": 27,
+          "shap_rank": 25,
+          "iv_rank": 24
+        },
+        {
+          "field": "payment_type",
+          "perm_ap_drop": 0.0007049221117332397,
+          "perm_ap_drop_sd": 0.00034683666992145533,
+          "shap_mean_abs": 0.012156860491570163,
+          "iv": 0.15742131231313938,
+          "perm_rank": 28,
+          "shap_rank": 28,
+          "iv_rank": 13
+        },
+        {
+          "field": "source",
+          "perm_ap_drop": -1.2586033166228638e-05,
+          "perm_ap_drop_sd": 9.78919297861017e-06,
+          "shap_mean_abs": 0.000456937458421444,
+          "iv": 0.0008590766006903076,
+          "perm_rank": 29,
+          "shap_rank": 29,
+          "iv_rank": 29
+        }
+      ],
+      "seconds": 125.0
+    }
+  },
+  "stage": "feature analysis and feature engineering (post-hoc)",
+  "created_singapore": "2026-10-21T16:37:02.446844+08:00",
+  "discipline": [
+    "frozen artifacts read only; hashes checked before/after",
+    "bins, encodings, selection rule and early stopping use months 0-6 only; month 7 reported once",
+    "designed after month-7 results were seen: exploratory, does not replace the frozen model"
+  ],
+  "frozen_hashes_before": {
+    "outputs/models/frozen_manifest.json": "ed72dd01b8e39922173e0015ff1876217d0ba3a9a57bbf5812ba7a95ea2a430f",
+    "outputs/models/lightgbm.joblib": "c47e4bb0d025d7eec02bff47073b0683d69c704d0400be91644a214fefdd2109",
+    "outputs/models/distilled_tree.joblib": "240dcaf6faf1a5de9cdd1d581cd5271be03d9276ec93a2bb37d38c78b07a5044",
+    "outputs/models/preprocessor.joblib": "64bbec37842955cf149292fd9670bec640f059ae72fe4c89e9d43c6ef59b9525",
+    "outputs/models/schema.json": "cccd254834f339db9073a4c681b84c85b301039cfbd7d7897bd4cd8a2906dae4",
+    "outputs/models/logistic_regression.joblib": "16a4dada8a542d2d71c0fd37949f575b24dbb13df4d23db63018e844261cc327",
+    "outputs/models/mlp.joblib": "c929f1aef361730b94297be71e48ddec15ab9b15a85cde284182d9a3a5eb83f1",
+    "outputs/models/isolation_forest.joblib": "861c53d882ceb51ed906640f91656e65b038d3713cf468a090ad6f3461062e64",
+    "outputs/evaluation.json": "33afdade6d83e74a9659ec5833d7abcbb902eb799b72a795f042c7b2a961f677",
+    "outputs/explanation.json": "bf3ca392780c0cbb4fc52918c75d3ff9b72d26607b695a569c7b80044320e443",
+    "outputs/predictions/validation.parquet": "c403c46e9434f7cae8434e86890efe18cda833b9b911fb1b8198918fdf9d2f64",
+    "outputs/predictions/test.parquet": "04ba29e5024f3d379f13a56c2bba3c0e584707461291882ceded9c0203d58516"
+  },
+  "frozen_hashes_after": {
+    "outputs/models/frozen_manifest.json": "ed72dd01b8e39922173e0015ff1876217d0ba3a9a57bbf5812ba7a95ea2a430f",
+    "outputs/models/lightgbm.joblib": "c47e4bb0d025d7eec02bff47073b0683d69c704d0400be91644a214fefdd2109",
+    "outputs/models/distilled_tree.joblib": "240dcaf6faf1a5de9cdd1d581cd5271be03d9276ec93a2bb37d38c78b07a5044",
+    "outputs/models/preprocessor.joblib": "64bbec37842955cf149292fd9670bec640f059ae72fe4c89e9d43c6ef59b9525",
+    "outputs/models/schema.json": "cccd254834f339db9073a4c681b84c85b301039cfbd7d7897bd4cd8a2906dae4",
+    "outputs/models/logistic_regression.joblib": "16a4dada8a542d2d71c0fd37949f575b24dbb13df4d23db63018e844261cc327",
+    "outputs/models/mlp.joblib": "c929f1aef361730b94297be71e48ddec15ab9b15a85cde284182d9a3a5eb83f1",
+    "outputs/models/isolation_forest.joblib": "861c53d882ceb51ed906640f91656e65b038d3713cf468a090ad6f3461062e64",
+    "outputs/evaluation.json": "33afdade6d83e74a9659ec5833d7abcbb902eb799b72a795f042c7b2a961f677",
+    "outputs/explanation.json": "bf3ca392780c0cbb4fc52918c75d3ff9b72d26607b695a569c7b80044320e443",
+    "outputs/predictions/validation.parquet": "c403c46e9434f7cae8434e86890efe18cda833b9b911fb1b8198918fdf9d2f64",
+    "outputs/predictions/test.parquet": "04ba29e5024f3d379f13a56c2bba3c0e584707461291882ceded9c0203d58516"
+  },
+  "frozen_artifacts_unchanged": true
+}

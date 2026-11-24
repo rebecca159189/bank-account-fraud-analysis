@@ -1,0 +1,107 @@
+{
+  "retrieved_at_utc": "2026-10-17T16:02:16.851038+00:00",
+  "official_repository": "https://github.com/feedzai/bank-account-fraud",
+  "official_kaggle_dataset": "https://www.kaggle.com/datasets/sgpjesus/bank-account-fraud-dataset-neurips-2022",
+  "paper_landing_page": "https://papers.neurips.cc/paper_files/paper/2022/hash/d9696563856bd350e4e7ac5e5812f23c-Abstract-Datasets_and_Benchmarks.html",
+  "sources": {
+    "datasheet.pdf": {
+      "url": "https://raw.githubusercontent.com/feedzai/bank-account-fraud/main/documents/datasheet.pdf",
+      "sha256": "367846738d63ed352183ba5e130809c8a313bd9219aa426c916ac2be709a81b0",
+      "bytes": 222883
+    },
+    "paper.pdf": {
+      "url": "https://papers.neurips.cc/paper_files/paper/2022/file/d9696563856bd350e4e7ac5e5812f23c-Paper-Datasets_and_Benchmarks.pdf",
+      "sha256": "b05cfbe15916173c0ae79728cd6e314ebd92ad82191ea7ddf2929a3280373641",
+      "bytes": 319263
+    },
+    "empirical_results.ipynb": {
+      "url": "https://raw.githubusercontent.com/feedzai/bank-account-fraud/main/notebooks/empirical_results.ipynb",
+      "sha256": "8964df82c3ab1417aeaf39b15d1146d13eddb9813f1d8f014f59387c79b920be",
+      "bytes": 15280
+    },
+    "official_README.md": {
+      "url": "https://raw.githubusercontent.com/feedzai/bank-account-fraud/main/README.md",
+      "sha256": "043afc759f0818c790a659a33dcc0bfa11172567739614e74b3cad9d4aa16716",
+      "bytes": 4709
+    },
+    "official_LICENSE": {
+      "url": "https://raw.githubusercontent.com/feedzai/bank-account-fraud/main/LICENSE",
+      "sha256": "cd0438d90fde99cdc0db4971c9a85a9d53b7fe07923c318fdf74000bd110630b",
+      "bytes": 11495
+    }
+  },
+  "dataset_facts": {
+    "nature": "Synthetic feature-engineered bank-account-opening applications, generated from CTGAN trained on anonymized real-world application data. This is not raw transaction data or live customer data.",
+    "scope": "Only Base variant is used in this project. Each official variant has 1,000,000 rows; the suite has Base plus 5 variants.",
+    "label": {
+      "name": "fraud_bool",
+      "fraud": 1,
+      "legitimate": 0
+    },
+    "month": {
+      "range": [
+        0,
+        7
+      ],
+      "meaning": "Eight consecutive application-month indices. These are not literal calendar months 0 to 7. Paper says original observations span February through September, but the synthetic month index should be reported as relative M1 to M8.",
+      "split_for_this_project": {
+        "train": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "validation": [
+          6
+        ],
+        "test": [
+          7
+        ]
+      }
+    },
+    "income": "Annual income represented in decile form; not an actual currency amount.",
+    "customer_age": "Applicant age rounded to the decade in the published data; protected age group cannot recover exact real applicant age."
+  },
+  "missing_value_policy": {
+    "sentinel_equals_minus_one": [
+      "prev_address_months_count",
+      "current_address_months_count",
+      "bank_months_count",
+      "session_length_in_minutes",
+      "device_distinct_emails_8w"
+    ],
+    "any_negative_missing": [
+      "intended_balcon_amount"
+    ],
+    "do_not_globally_replace_negatives": {
+      "velocity_6h": "Datasheet gives a valid published range starting at -175; no missing sentinel is documented. Negative values may reflect the synthetic generation/noise.",
+      "credit_risk_score": "Datasheet gives range [-191,389]; negative scores are not documented missing sentinels."
+    },
+    "implementation_advice": "Convert only documented sentinels to NaN, keep per-column missing indicators, fit any numeric imputers and scalers only on train. Count both native nulls and documented encoded missingness in EDA.",
+    "documentation_caveat": "Datasheet Q9 says no information is missing, but field-level Q7 explicitly documents missing sentinels. Field-level sentinel definitions should take precedence for cleaning."
+  },
+  "metrics_and_fairness": {
+    "operating_point": "Paper uses TPR (recall) at 5% FPR, where FPR=FP/(FP+TN), not 5% of all applications flagged.",
+    "validation_threshold": "For this project, select thresholds on month index 6 only and freeze before evaluating month index 7. Test FPR is measured, not forced back to 5%.",
+    "paper_reproduction_caveat": "Official notebook computes ROC and chooses the 5% FPR threshold using test labels, a descriptive oracle operating point. This should not be copied for an honest held-out deployment-threshold estimate.",
+    "alert_budget": "5% FPR and 5% total alert rate are different constraints. Equal-alert-budget model-versus-rule comparisons require a separate threshold frozen from validation.",
+    "age_group_primary": "Younger <50 and Older >=50, supported by datasheet Q17 and official empirical_results.ipynb.",
+    "age_boundary_discrepancy": "Paper section 3.2 instead states <=50 versus >50. Because age is rounded to decades, a sensitivity comparison is useful and the chosen boundary must be explicit.",
+    "paper_fairness_metric": "min(group FPR)/max(group FPR), with 1 meaning parity; also report signed FPR gap in percentage points and each denominator.",
+    "pr_auc": "State whether PR-AUC means sklearn average_precision_score (step-weighted AP) or trapezoidal integral; do not mix definitions.",
+    "threshold_ties": "ROC thresholds classify scores >= threshold. Official notebook later uses > threshold; use a consistent comparator and recompute confusion matrices to avoid tied-score inconsistencies."
+  },
+  "other_pitfalls": [
+    "The official README example pd.read_csv(index_col=0) is not universally safe. Inspect the actual downloaded header and preserve fraud_bool; drop only a proven export-index column.",
+    "Data is synthetic and the rows are independently generated: month enables temporal evaluation but no within-month ordering, applicant linkage, event replay, or real streaming window recomputation can be recovered.",
+    "month is available at scoring but represents an extrapolating time index. Treat it as a split variable and exclude from primary model inputs; a training-only/validation-only ablation can examine sensitivity.",
+    "The velocity features represent average application volume per hour over their windows, not necessarily a count associated with the same applicant.",
+    "Do not infer meanings of anonymized category codes such as payment_type or employment_status.",
+    "Some names in the datasheet predate the released schema: device_distinct_emails corresponds to released device_distinct_emails_8w.",
+    "Protected age in model inputs is an explicit modeling decision; report whether it is included. Removing age alone does not guarantee equal FPR because other features may be proxies.",
+    "Business review workloads, monetary savings, and real production deployment are hypothetical: the dataset lacks verified investigation costs and fraud loss amounts."
+  ],
+  "license": "Datasheet Q44 and Author Statement specify CC BY-NC-ND 4.0. Preserve original downloaded data and source attribution; derived local analytical outputs are separate from republishing a modified dataset."
+}

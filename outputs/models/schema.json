@@ -1,0 +1,55 @@
+{
+  "drop_constants": [
+    "device_fraud_count"
+  ],
+  "categories": {
+    "payment_type": [
+      "AA",
+      "AB",
+      "AC",
+      "AD",
+      "AE"
+    ],
+    "employment_status": [
+      "CA",
+      "CB",
+      "CC",
+      "CD",
+      "CE",
+      "CF",
+      "CG"
+    ],
+    "housing_status": [
+      "BA",
+      "BB",
+      "BC",
+      "BD",
+      "BE",
+      "BF",
+      "BG"
+    ],
+    "source": [
+      "INTERNET",
+      "TELEAPP"
+    ],
+    "device_os": [
+      "linux",
+      "macintosh",
+      "other",
+      "windows",
+      "x11"
+    ]
+  },
+  "training_months": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "excluded": [
+    "fraud_bool",
+    "month"
+  ]
+}
